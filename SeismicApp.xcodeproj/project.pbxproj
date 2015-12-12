@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A128D0901C1BA50A004C64C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A128D08F1C1BA50A004C64C4 /* AppDelegate.swift */; };
+		A128D0921C1BA50A004C64C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A128D0911C1BA50A004C64C4 /* ViewController.swift */; };
+		A128D0951C1BA50A004C64C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A128D0931C1BA50A004C64C4 /* Main.storyboard */; };
+		A128D0981C1BA50A004C64C4 /* SeismicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A128D0961C1BA50A004C64C4 /* SeismicApp.xcdatamodeld */; };
+		A128D09A1C1BA50A004C64C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A128D0991C1BA50A004C64C4 /* Assets.xcassets */; };
+		A128D09D1C1BA50A004C64C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A128D09B1C1BA50A004C64C4 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A128D08C1C1BA50A004C64C4 /* SeismicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeismicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A128D08F1C1BA50A004C64C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A128D0911C1BA50A004C64C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A128D0941C1BA50A004C64C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A128D0971C1BA50A004C64C4 /* SeismicApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SeismicApp.xcdatamodel; sourceTree = "<group>"; };
+		A128D0991C1BA50A004C64C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A128D09C1C1BA50A004C64C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A128D09E1C1BA50A004C64C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A128D0891C1BA50A004C64C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A128D0831C1BA50A004C64C4 = {
+			isa = PBXGroup;
+			children = (
+				A128D08E1C1BA50A004C64C4 /* SeismicApp */,
+				A128D08D1C1BA50A004C64C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A128D08D1C1BA50A004C64C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A128D08C1C1BA50A004C64C4 /* SeismicApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A128D08E1C1BA50A004C64C4 /* SeismicApp */ = {
+			isa = PBXGroup;
+			children = (
+				A128D08F1C1BA50A004C64C4 /* AppDelegate.swift */,
+				A128D0911C1BA50A004C64C4 /* ViewController.swift */,
+				A128D0931C1BA50A004C64C4 /* Main.storyboard */,
+				A128D0991C1BA50A004C64C4 /* Assets.xcassets */,
+				A128D09B1C1BA50A004C64C4 /* LaunchScreen.storyboard */,
+				A128D09E1C1BA50A004C64C4 /* Info.plist */,
+				A128D0961C1BA50A004C64C4 /* SeismicApp.xcdatamodeld */,
+			);
+			path = SeismicApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A128D08B1C1BA50A004C64C4 /* SeismicApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A128D0A11C1BA50A004C64C4 /* Build configuration list for PBXNativeTarget "SeismicApp" */;
+			buildPhases = (
+				A128D0881C1BA50A004C64C4 /* Sources */,
+				A128D0891C1BA50A004C64C4 /* Frameworks */,
+				A128D08A1C1BA50A004C64C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeismicApp;
+			productName = SeismicApp;
+			productReference = A128D08C1C1BA50A004C64C4 /* SeismicApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A128D0841C1BA50A004C64C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Leandoers;
+				TargetAttributes = {
+					A128D08B1C1BA50A004C64C4 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = A128D0871C1BA50A004C64C4 /* Build configuration list for PBXProject "SeismicApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A128D0831C1BA50A004C64C4;
+			productRefGroup = A128D08D1C1BA50A004C64C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A128D08B1C1BA50A004C64C4 /* SeismicApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A128D08A1C1BA50A004C64C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A128D09D1C1BA50A004C64C4 /* LaunchScreen.storyboard in Resources */,
+				A128D09A1C1BA50A004C64C4 /* Assets.xcassets in Resources */,
+				A128D0951C1BA50A004C64C4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A128D0881C1BA50A004C64C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A128D0981C1BA50A004C64C4 /* SeismicApp.xcdatamodeld in Sources */,
+				A128D0921C1BA50A004C64C4 /* ViewController.swift in Sources */,
+				A128D0901C1BA50A004C64C4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A128D0931C1BA50A004C64C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A128D0941C1BA50A004C64C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A128D09B1C1BA50A004C64C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A128D09C1C1BA50A004C64C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A128D09F1C1BA50A004C64C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A128D0A01C1BA50A004C64C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A128D0A21C1BA50A004C64C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SeismicApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leandoers.SeismicApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A128D0A31C1BA50A004C64C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SeismicApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leandoers.SeismicApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A128D0871C1BA50A004C64C4 /* Build configuration list for PBXProject "SeismicApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A128D09F1C1BA50A004C64C4 /* Debug */,
+				A128D0A01C1BA50A004C64C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A128D0A11C1BA50A004C64C4 /* Build configuration list for PBXNativeTarget "SeismicApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A128D0A21C1BA50A004C64C4 /* Debug */,
+				A128D0A31C1BA50A004C64C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A128D0961C1BA50A004C64C4 /* SeismicApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A128D0971C1BA50A004C64C4 /* SeismicApp.xcdatamodel */,
+			);
+			currentVersion = A128D0971C1BA50A004C64C4 /* SeismicApp.xcdatamodel */;
+			path = SeismicApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A128D0841C1BA50A004C64C4 /* Project object */;
+}
