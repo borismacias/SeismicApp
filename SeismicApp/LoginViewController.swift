@@ -8,17 +8,43 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet var emailInput:UITextField!
+    @IBOutlet var passwordInput:UITextField!
+    
+    @IBAction func login(){
+        let email = emailInput.text
+        let password = passwordInput.text
+        if(email?.characters.count == 0 || password?.characters.count == 0){
+            let alertController = UIAlertController.init(title: "Missing Fields", message: "You need to type in your email AND your password", preferredStyle: UIAlertControllerStyle.Alert)
+            let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.Default,handler: nil)
+            
+            alertController.addAction(alertAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else{
+            print("Email: \(email)")
+            print("Password: \(password)")
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.emailInput.delegate = self
+        self.passwordInput.delegate = self
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
 
