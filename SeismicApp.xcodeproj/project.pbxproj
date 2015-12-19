@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A103BC5D1C25BC2E008D9805 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A103BC5C1C25BC2E008D9805 /* LoginViewController.swift */; };
+		A103BC5F1C25BC5E008D9805 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A103BC5E1C25BC5E008D9805 /* InformationViewController.swift */; };
 		A128D0901C1BA50A004C64C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A128D08F1C1BA50A004C64C4 /* AppDelegate.swift */; };
-		A128D0921C1BA50A004C64C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A128D0911C1BA50A004C64C4 /* ViewController.swift */; };
 		A128D0951C1BA50A004C64C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A128D0931C1BA50A004C64C4 /* Main.storyboard */; };
 		A128D0981C1BA50A004C64C4 /* SeismicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A128D0961C1BA50A004C64C4 /* SeismicApp.xcdatamodeld */; };
 		A128D09A1C1BA50A004C64C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A128D0991C1BA50A004C64C4 /* Assets.xcassets */; };
 		A128D09D1C1BA50A004C64C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A128D09B1C1BA50A004C64C4 /* LaunchScreen.storyboard */; };
+		A195DDD21C25E20D00DE100E /* PreventionInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A195DDD11C25E20D00DE100E /* PreventionInfo.storyboard */; };
+		A195DDD51C25E22D00DE100E /* SesimicInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A195DDD31C25E22D00DE100E /* SesimicInfo.storyboard */; };
+		A195DDD71C25E38B00DE100E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A195DDD61C25E38B00DE100E /* HomeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A103BC5C1C25BC2E008D9805 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A103BC5E1C25BC5E008D9805 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		A128D08C1C1BA50A004C64C4 /* SeismicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeismicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A128D08F1C1BA50A004C64C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A128D0911C1BA50A004C64C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A128D0941C1BA50A004C64C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A128D0971C1BA50A004C64C4 /* SeismicApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SeismicApp.xcdatamodel; sourceTree = "<group>"; };
 		A128D0991C1BA50A004C64C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A128D09C1C1BA50A004C64C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A128D09E1C1BA50A004C64C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A195DDD11C25E20D00DE100E /* PreventionInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PreventionInfo.storyboard; sourceTree = "<group>"; };
+		A195DDD41C25E22D00DE100E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SesimicInfo.storyboard; sourceTree = "<group>"; };
+		A195DDD61C25E38B00DE100E /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				A128D08F1C1BA50A004C64C4 /* AppDelegate.swift */,
-				A128D0911C1BA50A004C64C4 /* ViewController.swift */,
 				A128D0931C1BA50A004C64C4 /* Main.storyboard */,
+				A195DDD31C25E22D00DE100E /* SesimicInfo.storyboard */,
+				A195DDD11C25E20D00DE100E /* PreventionInfo.storyboard */,
+				A103BC5C1C25BC2E008D9805 /* LoginViewController.swift */,
 				A128D0991C1BA50A004C64C4 /* Assets.xcassets */,
 				A128D09B1C1BA50A004C64C4 /* LaunchScreen.storyboard */,
 				A128D09E1C1BA50A004C64C4 /* Info.plist */,
 				A128D0961C1BA50A004C64C4 /* SeismicApp.xcdatamodeld */,
+				A103BC5E1C25BC5E008D9805 /* InformationViewController.swift */,
+				A195DDD61C25E38B00DE100E /* HomeTableViewController.swift */,
 			);
 			path = SeismicApp;
 			sourceTree = "<group>";
@@ -127,7 +139,9 @@
 			files = (
 				A128D09D1C1BA50A004C64C4 /* LaunchScreen.storyboard in Resources */,
 				A128D09A1C1BA50A004C64C4 /* Assets.xcassets in Resources */,
+				A195DDD21C25E20D00DE100E /* PreventionInfo.storyboard in Resources */,
 				A128D0951C1BA50A004C64C4 /* Main.storyboard in Resources */,
+				A195DDD51C25E22D00DE100E /* SesimicInfo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A103BC5D1C25BC2E008D9805 /* LoginViewController.swift in Sources */,
 				A128D0981C1BA50A004C64C4 /* SeismicApp.xcdatamodeld in Sources */,
-				A128D0921C1BA50A004C64C4 /* ViewController.swift in Sources */,
 				A128D0901C1BA50A004C64C4 /* AppDelegate.swift in Sources */,
+				A103BC5F1C25BC5E008D9805 /* InformationViewController.swift in Sources */,
+				A195DDD71C25E38B00DE100E /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +177,14 @@
 				A128D09C1C1BA50A004C64C4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A195DDD31C25E22D00DE100E /* SesimicInfo.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A195DDD41C25E22D00DE100E /* Base */,
+			);
+			name = SesimicInfo.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -288,6 +312,7 @@
 				A128D0A31C1BA50A004C64C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
