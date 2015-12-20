@@ -24,6 +24,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         else{
+            
+            let userData = [
+                "email": email!
+            ]
+            ParseClient.sharedInstance().login(userData,completionHandler: {
+                (success, data) -> Void in
+                    print(success)
+                    print(data)
+            })
             print("Email: \(email)")
             print("Password: \(password)")
         }

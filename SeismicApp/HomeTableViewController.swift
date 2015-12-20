@@ -9,6 +9,15 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
+    
+    @IBAction func logout(){
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(nil, forKey:"objectId")
+        defaults.synchronize()
+        self.performSegueWithIdentifier("showLogin", sender: self)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +37,10 @@ class HomeTableViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         let defaults = NSUserDefaults.standardUserDefaults()
-        let userIDKey = "userID"
-        let storedID = defaults.integerForKey(userIDKey)
-        
-        if storedID == 0  {
+        let userIDKey = "objectId"
+        let storedID = defaults.stringForKey(userIDKey)
+        print(storedID)
+        if storedID == nil  {
             self.performSegueWithIdentifier("showLogin", sender: self)
         }
     }

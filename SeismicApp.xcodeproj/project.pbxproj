@@ -17,6 +17,9 @@
 		A195DDD21C25E20D00DE100E /* PreventionInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A195DDD11C25E20D00DE100E /* PreventionInfo.storyboard */; };
 		A195DDD51C25E22D00DE100E /* SesimicInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A195DDD31C25E22D00DE100E /* SesimicInfo.storyboard */; };
 		A195DDD71C25E38B00DE100E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A195DDD61C25E38B00DE100E /* HomeTableViewController.swift */; };
+		A1F947411C25FCFA00A685E0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F947401C25FCFA00A685E0 /* SignUpViewController.swift */; };
+		A1F947441C260FC300A685E0 /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F947431C260FC300A685E0 /* ParseClient.swift */; };
+		A1F947481C26101A00A685E0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F947471C26101A00A685E0 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		A195DDD11C25E20D00DE100E /* PreventionInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PreventionInfo.storyboard; sourceTree = "<group>"; };
 		A195DDD41C25E22D00DE100E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SesimicInfo.storyboard; sourceTree = "<group>"; };
 		A195DDD61C25E38B00DE100E /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		A1F947401C25FCFA00A685E0 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A1F947431C260FC300A685E0 /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
+		A1F947471C26101A00A685E0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		A128D08E1C1BA50A004C64C4 /* SeismicApp */ = {
 			isa = PBXGroup;
 			children = (
+				A1F947421C260F4A00A685E0 /* Parse */,
 				A128D08F1C1BA50A004C64C4 /* AppDelegate.swift */,
 				A128D0931C1BA50A004C64C4 /* Main.storyboard */,
 				A195DDD31C25E22D00DE100E /* SesimicInfo.storyboard */,
@@ -75,8 +82,18 @@
 				A128D0961C1BA50A004C64C4 /* SeismicApp.xcdatamodeld */,
 				A103BC5E1C25BC5E008D9805 /* InformationViewController.swift */,
 				A195DDD61C25E38B00DE100E /* HomeTableViewController.swift */,
+				A1F947401C25FCFA00A685E0 /* SignUpViewController.swift */,
+				A1F947471C26101A00A685E0 /* User.swift */,
 			);
 			path = SeismicApp;
+			sourceTree = "<group>";
+		};
+		A1F947421C260F4A00A685E0 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				A1F947431C260FC300A685E0 /* ParseClient.swift */,
+			);
+			name = Parse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F947411C25FCFA00A685E0 /* SignUpViewController.swift in Sources */,
 				A103BC5D1C25BC2E008D9805 /* LoginViewController.swift in Sources */,
+				A1F947441C260FC300A685E0 /* ParseClient.swift in Sources */,
 				A128D0981C1BA50A004C64C4 /* SeismicApp.xcdatamodeld in Sources */,
+				A1F947481C26101A00A685E0 /* User.swift in Sources */,
 				A128D0901C1BA50A004C64C4 /* AppDelegate.swift in Sources */,
 				A103BC5F1C25BC5E008D9805 /* InformationViewController.swift in Sources */,
 				A195DDD71C25E38B00DE100E /* HomeTableViewController.swift in Sources */,
