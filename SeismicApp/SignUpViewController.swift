@@ -37,7 +37,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 dispatch_async(dispatch_get_main_queue(),{
                     let title:String!
                     let message:String!
-                    print(data)
                     if success{
                         if data!["error"] != nil{
                             title = "Error"
@@ -47,7 +46,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                             message = "Account Created"
                             NSUserDefaults.standardUserDefaults().setObject(data!["objectId"], forKey: "objectId")
                             NSUserDefaults.standardUserDefaults().synchronize()
-                            self.dismissViewControllerAnimated(true, completion: nil)
+                            self.view.window!.rootViewController?.dismissViewControllerAnimated(false,completion: nil)
+                            
                         }
                     }else{
                         title = "Error"
@@ -57,7 +57,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                     let alertController = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
                     let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
                     alertController.addAction(alertAction)
-                    self.presentViewController(alertController, animated: true, completion: nil)
+                    if !success{
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    }
                 })
                 
             })

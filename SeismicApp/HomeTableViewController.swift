@@ -39,7 +39,6 @@ class HomeTableViewController: UITableViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         let userIDKey = "objectId"
         let storedID = defaults.stringForKey(userIDKey)
-        print(storedID)
         if storedID == nil  {
             self.performSegueWithIdentifier("showLogin", sender: self)
         }

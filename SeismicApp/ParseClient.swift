@@ -36,38 +36,13 @@ class ParseClient: NSObject {
     }
     
 
-    func login(userData:[String:AnyObject],completionHandler: (success: Bool ,data: [String:AnyObject]?) -> Void) {
+    func signIn(userData:[String:AnyObject],completionHandler: (success: Bool ,data: [String:AnyObject]?) -> Void) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
-        let request = NSMutableURLRequest(URL: NSURL(string: "\(self.baseURL)/users?username=\(userData["username"])&password=\(userData["password"])")!)
-        request.addValue("\(self.appID)", forHTTPHeaderField: "X-Parse-Application-Id")
-        request.addValue("\(self.apiKey)", forHTTPHeaderField: "X-Parse-REST-API-Key")
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithRequest(request) { data, response, error in
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-            if error != nil {
-                completionHandler(success: false, data: ["error": "\(error!.localizedDescription)"])
-                return
-            }else{
-                var parsedData:[String:AnyObject]?
-                do{
-                    parsedData = try  NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as? [String:AnyObject]
-                    completionHandler(success: true, data: parsedData! )
-                }catch _{
-                    completionHandler(success: false, data: nil )
-                }
-            }
-            
-        }
-        task.resume()
-    }
+        let data = "username=\(userData["username"]!)&password=\(userData["password"]!)"
+        let url = "\(self.baseURL)/login?\(data)"
+        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
 
-    
-    
-    // getting every user because lulz
-    func getUsers(completionHandler: (success: Bool ,data: [String:AnyObject]?) -> Void) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        let request = NSMutableURLRequest(URL: NSURL(string: "\(self.baseURL)/users")!)
         request.addValue("\(self.appID)", forHTTPHeaderField: "X-Parse-Application-Id")
         request.addValue("\(self.apiKey)", forHTTPHeaderField: "X-Parse-REST-API-Key")
         let session = NSURLSession.sharedSession()

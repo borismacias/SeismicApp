@@ -19,15 +19,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kdZ-RA-CZb">
-                                <rect key="frame" x="232" y="273" width="137" height="54"/>
+                                <rect key="frame" x="232" y="260" width="137" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qsR-g1-kGc">
-                                        <rect key="frame" x="0.0" y="0.0" width="137" height="17"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qsR-g1-kGc">
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="6UN-iG-DY1"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o8j-2f-VSs">
-                                        <rect key="frame" x="0.0" y="37" width="137" height="17"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o8j-2f-VSs">
+                                        <rect key="frame" x="0.0" y="50" width="137" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="137" id="w4j-lW-GHw"/>
                                         </constraints>
@@ -35,15 +38,18 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="o8j-2f-VSs" firstAttribute="height" secondItem="qsR-g1-kGc" secondAttribute="height" id="TnA-LN-UPg"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SeismicApp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAT-WM-SFL">
-                                <rect key="frame" x="255.5" y="212" width="89.5" height="20.5"/>
+                                <rect key="frame" x="255" y="199" width="89.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e17-ws-3No">
-                                <rect key="frame" x="270" y="367" width="60" height="30"/>
+                                <rect key="frame" x="270" y="380" width="60" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="gfe-An-MYz"/>
@@ -56,7 +62,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5v-46-Mnl">
-                                <rect key="frame" x="270" y="417" width="60" height="30"/>
+                                <rect key="frame" x="270" y="430" width="60" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="PmV-Ix-Ls0"/>
@@ -82,8 +88,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailInput" destination="qsR-g1-kGc" id="w7G-oo-SDl"/>
                         <outlet property="passwordInput" destination="o8j-2f-VSs" id="0Sx-Rf-4nE"/>
+                        <outlet property="usernameInput" destination="qsR-g1-kGc" id="TrS-Ui-bwv"/>
+                        <segue destination="fTC-a5-7Ot" kind="show" identifier="showHomeSignIn" id="Myd-GZ-LIM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYt-tt-M7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,7 +118,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Q2-IX-tTx">
                                 <rect key="frame" x="200" y="235" width="200" height="130"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBy-JM-Af9">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBy-JM-Af9">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="mFa-sa-5pJ"/>
@@ -119,12 +126,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tbw-Up-4XW">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tbw-Up-4XW">
                                         <rect key="frame" x="0.0" y="50" width="200" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcz-eW-4bh">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcz-eW-4bh">
                                         <rect key="frame" x="0.0" y="100" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="jvN-o2-EVx"/>
@@ -166,6 +173,7 @@
                         <outlet property="emailTextField" destination="Tbw-Up-4XW" id="Cl9-vS-5DZ"/>
                         <outlet property="nameTextField" destination="EBy-JM-Af9" id="E1g-yV-Ept"/>
                         <outlet property="passwordTextField" destination="bcz-eW-4bh" id="vai-AC-tID"/>
+                        <segue destination="fTC-a5-7Ot" kind="show" identifier="showHomeSignUp" id="52N-yg-89p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfN-yw-g5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -322,4 +330,7 @@
             <point key="canvasLocation" x="1640.5" y="1234"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Myd-GZ-LIM"/>
+    </inferredMetricsTieBreakers>
 </document>
