@@ -10,13 +10,13 @@ import Foundation
 
 class User{
 
-    var name:String!
+    var username:String!
     var email:String!
-    var id:String!
+    var objectId:String!
     
     init(data: [String:AnyObject]){
-        self.id = data["id"] as! String
-        self.name = data["name"] as! String
+        self.objectId = data["id"] as! String
+        self.username = data["name"] as! String
         self.email = data["email"] as! String
     }
     

@@ -12,8 +12,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var usernameInput:UITextField!
     @IBOutlet var passwordInput:UITextField!
+    var spinner:UIActivityIndicatorView!
     
     @IBAction func login(){
+        spinner = UIActivityIndicatorView()
+        spinner.activityIndicatorViewStyle = .Gray
+        spinner.center = view.center
+        spinner.hidesWhenStopped = true
+        view.addSubview(spinner)
+        spinner.startAnimating()
+        
         let username = usernameInput.text
         let password = passwordInput.text
         if(username?.characters.count == 0 || password?.characters.count == 0){
@@ -38,23 +46,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         if data!["error"] != nil{
                             title = "Error"
                             message = data!["error"] as! String
+                            Helpers.displayAlert(title, message: message, vc: self)
                         }else{
                             title = "Success"
                             message = "Logged In!"
                             NSUserDefaults.standardUserDefaults().setObject(data!["objectId"], forKey: "objectId")
                             NSUserDefaults.standardUserDefaults().synchronize()
-                            self.view.window!.rootViewController?.dismissViewControllerAnimated(false,completion: nil)
+                            self.performSegueWithIdentifier("unwindFromSignIn", sender: self)
                         }
                     }else{
-                        print(data)
                         title = "Error"
                         message = "\(data!["error"]!)"
+                        Helpers.displayAlert(title, message: message, vc: self)
                     }
-                    
-                    let alertController = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-                    let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
-                    alertController.addAction(alertAction)
-                    self.presentViewController(alertController, animated: true, completion: nil)
+                    self.spinner.stopAnimating()
                 })
             })
         }

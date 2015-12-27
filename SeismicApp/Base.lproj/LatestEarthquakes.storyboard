@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fdv-wW-Jim">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Latest Earthquakes Table View Controller-->
+        <scene sceneID="SC8-Zg-ga6">
+            <objects>
+                <tableViewController id="fdv-wW-Jim" customClass="LatestEarthquakesTableViewController" customModule="SeismicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="156" sectionHeaderHeight="28" sectionFooterHeight="28" id="03J-dv-GL6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EarthquakeCell" rowHeight="156" id="5cF-bM-ch8" customClass="LatestEarthquakeTableViewCell" customModule="SeismicApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="156"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5cF-bM-ch8" id="8Ix-2Q-UPU">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="155.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jCk-Ou-H0i">
+                                            <rect key="frame" x="20" y="53" width="343" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9i-OY-sOI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBm-rb-POH">
+                                                    <rect key="frame" x="0.0" y="38" width="343" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magnitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM0-jw-Y3s">
+                                            <rect key="frame" x="393" y="54" width="179" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QM0-jw-Y3s" firstAttribute="leading" secondItem="jCk-Ou-H0i" secondAttribute="trailing" constant="30" id="Ary-2e-ZeY"/>
+                                        <constraint firstItem="QM0-jw-Y3s" firstAttribute="centerY" secondItem="8Ix-2Q-UPU" secondAttribute="centerY" id="It5-1A-NN9"/>
+                                        <constraint firstItem="jCk-Ou-H0i" firstAttribute="leading" secondItem="8Ix-2Q-UPU" secondAttribute="leading" constant="20" id="Vhw-xO-5ba"/>
+                                        <constraint firstItem="jCk-Ou-H0i" firstAttribute="centerY" secondItem="8Ix-2Q-UPU" secondAttribute="centerY" id="YhM-bE-Re6"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QM0-jw-Y3s" secondAttribute="trailing" constant="20" id="a2v-TE-ezo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="pBm-rb-POH" id="MOq-lp-sUW"/>
+                                    <outlet property="magnitudeLabel" destination="QM0-jw-Y3s" id="5nD-g3-771"/>
+                                    <outlet property="placeLabel" destination="M9i-OY-sOI" id="Y5M-Sk-Nlh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fdv-wW-Jim" id="6h4-iQ-XfJ"/>
+                            <outlet property="delegate" destination="fdv-wW-Jim" id="3Nj-RG-0kV"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableview" destination="03J-dv-GL6" id="7DR-Hs-Yds"/>
+                        <segue destination="P9R-JS-f3o" kind="presentation" identifier="detailEarthquakeSegue" id="U2C-i3-DLP"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8j-6A-AZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763" y="1989"/>
+        </scene>
+        <!--Earthquake Detail View Controller-->
+        <scene sceneID="Z7u-0b-Nrr">
+            <objects>
+                <viewController id="P9R-JS-f3o" customClass="EarthquakeDetailViewController" customModule="SeismicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1D2-Ih-YKE"/>
+                        <viewControllerLayoutGuide type="bottom" id="M3a-l9-jCV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Kh-Lp-Szw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ycr-8X-9bC">
+                                <rect key="frame" x="0.0" y="160.5" width="600" height="395.5"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AR3-3a-dFY">
+                                <rect key="frame" x="20" y="70" width="560" height="70.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsJ-wG-a0P">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="32.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRA-VY-1yr">
+                                        <rect key="frame" x="0.0" y="52.5" width="560" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krB-sv-NHI">
+                                <rect key="frame" x="25" y="26" width="43" height="34"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss" destination="P9R-JS-f3o" eventType="touchUpInside" id="47n-Rs-Djg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AR3-3a-dFY" firstAttribute="leading" secondItem="0Kh-Lp-Szw" secondAttribute="leadingMargin" id="0Ga-0M-A6e"/>
+                            <constraint firstItem="FsJ-wG-a0P" firstAttribute="top" secondItem="krB-sv-NHI" secondAttribute="bottom" constant="10" id="1J0-gw-R8p"/>
+                            <constraint firstItem="Ycr-8X-9bC" firstAttribute="leading" secondItem="0Kh-Lp-Szw" secondAttribute="leading" id="67N-WH-05w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AR3-3a-dFY" secondAttribute="trailing" id="7wv-y5-L71"/>
+                            <constraint firstItem="AR3-3a-dFY" firstAttribute="top" secondItem="1D2-Ih-YKE" secondAttribute="bottom" constant="50" id="QXL-Z1-kBb"/>
+                            <constraint firstItem="Ycr-8X-9bC" firstAttribute="top" secondItem="AR3-3a-dFY" secondAttribute="bottom" constant="20" id="Ty6-BW-DVD"/>
+                            <constraint firstItem="M3a-l9-jCV" firstAttribute="top" secondItem="Ycr-8X-9bC" secondAttribute="bottom" id="Yxx-xl-cKq"/>
+                            <constraint firstAttribute="trailing" secondItem="Ycr-8X-9bC" secondAttribute="trailing" id="cih-Ur-Akd"/>
+                            <constraint firstItem="krB-sv-NHI" firstAttribute="leading" secondItem="0Kh-Lp-Szw" secondAttribute="leadingMargin" constant="5" id="kvN-Sx-ErH"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="xRA-VY-1yr" id="d2u-QO-Z9C"/>
+                        <outlet property="mapview" destination="Ycr-8X-9bC" id="EGE-tJ-seU"/>
+                        <outlet property="placeLabel" destination="FsJ-wG-a0P" id="qsJ-Kc-6Oz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNe-1h-10s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2480" y="1989"/>
+        </scene>
+    </scenes>
+</document>

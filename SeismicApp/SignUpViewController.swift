@@ -13,9 +13,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var nameTextField:UITextField!
     @IBOutlet var emailTextField:UITextField!
     @IBOutlet var passwordTextField:UITextField!
+    var spinner:UIActivityIndicatorView!
     
     @IBAction func signUp(){
-    
+        
+        spinner = UIActivityIndicatorView()
+        spinner.activityIndicatorViewStyle = .Gray
+        spinner.center = view.center
+        spinner.hidesWhenStopped = true
+        view.addSubview(spinner)
+        spinner.startAnimating()
+        
         let name = nameTextField.text
         let email = emailTextField.text
         let password = passwordTextField.text
@@ -41,25 +49,18 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         if data!["error"] != nil{
                             title = "Error"
                             message = data!["error"] as! String
+                            Helpers.displayAlert(title, message: message, vc: self)
                         }else{
-                            title = "Success"
-                            message = "Account Created"
                             NSUserDefaults.standardUserDefaults().setObject(data!["objectId"], forKey: "objectId")
                             NSUserDefaults.standardUserDefaults().synchronize()
-                            self.view.window!.rootViewController?.dismissViewControllerAnimated(false,completion: nil)
-                            
+                            self.performSegueWithIdentifier("unwindFromSignUp", sender: self)
                         }
                     }else{
                         title = "Error"
                         message = "Unexpected Error"
+                        Helpers.displayAlert(title, message: message, vc: self)
                     }
-                    
-                    let alertController = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-                    let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
-                    alertController.addAction(alertAction)
-                    if !success{
-                        self.presentViewController(alertController, animated: true, completion: nil)
-                    }
+                    self.spinner.stopAnimating()
                 })
                 
             })

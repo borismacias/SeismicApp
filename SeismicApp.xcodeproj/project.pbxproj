@@ -11,12 +11,25 @@
 		A103BC5F1C25BC5E008D9805 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A103BC5E1C25BC5E008D9805 /* InformationViewController.swift */; };
 		A128D0901C1BA50A004C64C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A128D08F1C1BA50A004C64C4 /* AppDelegate.swift */; };
 		A128D0951C1BA50A004C64C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A128D0931C1BA50A004C64C4 /* Main.storyboard */; };
-		A128D0981C1BA50A004C64C4 /* SeismicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A128D0961C1BA50A004C64C4 /* SeismicApp.xcdatamodeld */; };
 		A128D09A1C1BA50A004C64C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A128D0991C1BA50A004C64C4 /* Assets.xcassets */; };
 		A128D09D1C1BA50A004C64C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A128D09B1C1BA50A004C64C4 /* LaunchScreen.storyboard */; };
-		A195DDD21C25E20D00DE100E /* PreventionInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A195DDD11C25E20D00DE100E /* PreventionInfo.storyboard */; };
+		A17243081C2F33AD00D43CC7 /* LatestEarthquakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17243071C2F33AD00D43CC7 /* LatestEarthquakeTableViewCell.swift */; };
+		A17AA75D1C2F1225003BBC6E /* USGS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17AA75C1C2F1225003BBC6E /* USGS.swift */; };
+		A17AA75F1C2F12FD003BBC6E /* Earthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17AA75E1C2F12FD003BBC6E /* Earthquake.swift */; };
+		A17AA7621C2F17A6003BBC6E /* LatestEarthquakes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17AA7601C2F17A6003BBC6E /* LatestEarthquakes.storyboard */; };
+		A17AA7641C2F17F2003BBC6E /* LatestEarthquakesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17AA7631C2F17F2003BBC6E /* LatestEarthquakesTableViewController.swift */; };
+		A18311551C28AA2B0073ADE5 /* QueEsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18311541C28AA2B0073ADE5 /* QueEsTableViewController.swift */; };
+		A18311571C28AA3A0073ADE5 /* PorQueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18311561C28AA3A0073ADE5 /* PorQueTableViewController.swift */; };
 		A195DDD51C25E22D00DE100E /* SesimicInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A195DDD31C25E22D00DE100E /* SesimicInfo.storyboard */; };
 		A195DDD71C25E38B00DE100E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A195DDD61C25E38B00DE100E /* HomeTableViewController.swift */; };
+		A1B43F321C2F455A002233DD /* EarthquakeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F311C2F455A002233DD /* EarthquakeDetailViewController.swift */; };
+		A1B43F371C2F9AA0002233DD /* Flashcards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B43F351C2F9AA0002233DD /* Flashcards.storyboard */; };
+		A1B43F3A1C2F9BBE002233DD /* FlashcardsManagerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F391C2F9BBE002233DD /* FlashcardsManagerTableViewController.swift */; };
+		A1B43F3C1C2F9BD2002233DD /* NewFlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F3B1C2F9BD2002233DD /* NewFlashcardViewController.swift */; };
+		A1B43F3E1C2F9BE2002233DD /* PlayFlashcardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F3D1C2F9BE2002233DD /* PlayFlashcardsViewController.swift */; };
+		A1B43F401C2F9C02002233DD /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F3F1C2F9C02002233DD /* Flashcard.swift */; };
+		A1B43F4C1C2F9DA1002233DD /* SeismicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F4A1C2F9DA1002233DD /* SeismicApp.xcdatamodeld */; };
+		A1E180211C27003F00AE6759 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E180201C27003F00AE6759 /* Helpers.swift */; };
 		A1F947411C25FCFA00A685E0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F947401C25FCFA00A685E0 /* SignUpViewController.swift */; };
 		A1F947441C260FC300A685E0 /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F947431C260FC300A685E0 /* ParseClient.swift */; };
 		A1F947481C26101A00A685E0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F947471C26101A00A685E0 /* User.swift */; };
@@ -28,13 +41,26 @@
 		A128D08C1C1BA50A004C64C4 /* SeismicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeismicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A128D08F1C1BA50A004C64C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A128D0941C1BA50A004C64C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A128D0971C1BA50A004C64C4 /* SeismicApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SeismicApp.xcdatamodel; sourceTree = "<group>"; };
 		A128D0991C1BA50A004C64C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A128D09C1C1BA50A004C64C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A128D09E1C1BA50A004C64C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A195DDD11C25E20D00DE100E /* PreventionInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PreventionInfo.storyboard; sourceTree = "<group>"; };
+		A17243071C2F33AD00D43CC7 /* LatestEarthquakeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestEarthquakeTableViewCell.swift; sourceTree = "<group>"; };
+		A17AA75C1C2F1225003BBC6E /* USGS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USGS.swift; sourceTree = "<group>"; };
+		A17AA75E1C2F12FD003BBC6E /* Earthquake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Earthquake.swift; sourceTree = "<group>"; };
+		A17AA7611C2F17A6003BBC6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LatestEarthquakes.storyboard; sourceTree = "<group>"; };
+		A17AA7631C2F17F2003BBC6E /* LatestEarthquakesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestEarthquakesTableViewController.swift; sourceTree = "<group>"; };
+		A18311541C28AA2B0073ADE5 /* QueEsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueEsTableViewController.swift; sourceTree = "<group>"; };
+		A18311561C28AA3A0073ADE5 /* PorQueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PorQueTableViewController.swift; sourceTree = "<group>"; };
 		A195DDD41C25E22D00DE100E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SesimicInfo.storyboard; sourceTree = "<group>"; };
 		A195DDD61C25E38B00DE100E /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		A1B43F311C2F455A002233DD /* EarthquakeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthquakeDetailViewController.swift; sourceTree = "<group>"; };
+		A1B43F361C2F9AA0002233DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Flashcards.storyboard; sourceTree = "<group>"; };
+		A1B43F391C2F9BBE002233DD /* FlashcardsManagerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardsManagerTableViewController.swift; sourceTree = "<group>"; };
+		A1B43F3B1C2F9BD2002233DD /* NewFlashcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFlashcardViewController.swift; sourceTree = "<group>"; };
+		A1B43F3D1C2F9BE2002233DD /* PlayFlashcardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayFlashcardsViewController.swift; sourceTree = "<group>"; };
+		A1B43F3F1C2F9C02002233DD /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
+		A1B43F4B1C2F9DA1002233DD /* SeismicApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SeismicApp.xcdatamodel; sourceTree = "<group>"; };
+		A1E180201C27003F00AE6759 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		A1F947401C25FCFA00A685E0 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A1F947431C260FC300A685E0 /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
 		A1F947471C26101A00A685E0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -70,22 +96,59 @@
 		A128D08E1C1BA50A004C64C4 /* SeismicApp */ = {
 			isa = PBXGroup;
 			children = (
+				A1B43F381C2F9B9E002233DD /* FlashcardsVCs */,
+				A17AA75B1C2F1210003BBC6E /* USGS */,
+				A18311531C28A9F70073ADE5 /* SismosVCs */,
 				A1F947421C260F4A00A685E0 /* Parse */,
 				A128D08F1C1BA50A004C64C4 /* AppDelegate.swift */,
 				A128D0931C1BA50A004C64C4 /* Main.storyboard */,
+				A1B43F351C2F9AA0002233DD /* Flashcards.storyboard */,
+				A17AA7601C2F17A6003BBC6E /* LatestEarthquakes.storyboard */,
 				A195DDD31C25E22D00DE100E /* SesimicInfo.storyboard */,
-				A195DDD11C25E20D00DE100E /* PreventionInfo.storyboard */,
 				A103BC5C1C25BC2E008D9805 /* LoginViewController.swift */,
 				A128D0991C1BA50A004C64C4 /* Assets.xcassets */,
 				A128D09B1C1BA50A004C64C4 /* LaunchScreen.storyboard */,
 				A128D09E1C1BA50A004C64C4 /* Info.plist */,
-				A128D0961C1BA50A004C64C4 /* SeismicApp.xcdatamodeld */,
 				A103BC5E1C25BC5E008D9805 /* InformationViewController.swift */,
 				A195DDD61C25E38B00DE100E /* HomeTableViewController.swift */,
 				A1F947401C25FCFA00A685E0 /* SignUpViewController.swift */,
 				A1F947471C26101A00A685E0 /* User.swift */,
+				A1E180201C27003F00AE6759 /* Helpers.swift */,
+				A17AA75E1C2F12FD003BBC6E /* Earthquake.swift */,
+				A17AA7631C2F17F2003BBC6E /* LatestEarthquakesTableViewController.swift */,
+				A17243071C2F33AD00D43CC7 /* LatestEarthquakeTableViewCell.swift */,
+				A1B43F311C2F455A002233DD /* EarthquakeDetailViewController.swift */,
+				A1B43F3F1C2F9C02002233DD /* Flashcard.swift */,
+				A1B43F4A1C2F9DA1002233DD /* SeismicApp.xcdatamodeld */,
 			);
 			path = SeismicApp;
+			sourceTree = "<group>";
+		};
+		A17AA75B1C2F1210003BBC6E /* USGS */ = {
+			isa = PBXGroup;
+			children = (
+				A17AA75C1C2F1225003BBC6E /* USGS.swift */,
+			);
+			name = USGS;
+			sourceTree = "<group>";
+		};
+		A18311531C28A9F70073ADE5 /* SismosVCs */ = {
+			isa = PBXGroup;
+			children = (
+				A18311541C28AA2B0073ADE5 /* QueEsTableViewController.swift */,
+				A18311561C28AA3A0073ADE5 /* PorQueTableViewController.swift */,
+			);
+			name = SismosVCs;
+			sourceTree = "<group>";
+		};
+		A1B43F381C2F9B9E002233DD /* FlashcardsVCs */ = {
+			isa = PBXGroup;
+			children = (
+				A1B43F391C2F9BBE002233DD /* FlashcardsManagerTableViewController.swift */,
+				A1B43F3B1C2F9BD2002233DD /* NewFlashcardViewController.swift */,
+				A1B43F3D1C2F9BE2002233DD /* PlayFlashcardsViewController.swift */,
+			);
+			name = FlashcardsVCs;
 			sourceTree = "<group>";
 		};
 		A1F947421C260F4A00A685E0 /* Parse */ = {
@@ -154,11 +217,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A17AA7621C2F17A6003BBC6E /* LatestEarthquakes.storyboard in Resources */,
 				A128D09D1C1BA50A004C64C4 /* LaunchScreen.storyboard in Resources */,
 				A128D09A1C1BA50A004C64C4 /* Assets.xcassets in Resources */,
-				A195DDD21C25E20D00DE100E /* PreventionInfo.storyboard in Resources */,
 				A128D0951C1BA50A004C64C4 /* Main.storyboard in Resources */,
 				A195DDD51C25E22D00DE100E /* SesimicInfo.storyboard in Resources */,
+				A1B43F371C2F9AA0002233DD /* Flashcards.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,11 +236,23 @@
 				A1F947411C25FCFA00A685E0 /* SignUpViewController.swift in Sources */,
 				A103BC5D1C25BC2E008D9805 /* LoginViewController.swift in Sources */,
 				A1F947441C260FC300A685E0 /* ParseClient.swift in Sources */,
-				A128D0981C1BA50A004C64C4 /* SeismicApp.xcdatamodeld in Sources */,
+				A17AA75D1C2F1225003BBC6E /* USGS.swift in Sources */,
+				A1B43F3E1C2F9BE2002233DD /* PlayFlashcardsViewController.swift in Sources */,
+				A1B43F4C1C2F9DA1002233DD /* SeismicApp.xcdatamodeld in Sources */,
+				A18311551C28AA2B0073ADE5 /* QueEsTableViewController.swift in Sources */,
+				A1B43F401C2F9C02002233DD /* Flashcard.swift in Sources */,
+				A1E180211C27003F00AE6759 /* Helpers.swift in Sources */,
+				A17AA7641C2F17F2003BBC6E /* LatestEarthquakesTableViewController.swift in Sources */,
 				A1F947481C26101A00A685E0 /* User.swift in Sources */,
 				A128D0901C1BA50A004C64C4 /* AppDelegate.swift in Sources */,
+				A1B43F3C1C2F9BD2002233DD /* NewFlashcardViewController.swift in Sources */,
 				A103BC5F1C25BC5E008D9805 /* InformationViewController.swift in Sources */,
+				A17AA75F1C2F12FD003BBC6E /* Earthquake.swift in Sources */,
+				A1B43F321C2F455A002233DD /* EarthquakeDetailViewController.swift in Sources */,
+				A18311571C28AA3A0073ADE5 /* PorQueTableViewController.swift in Sources */,
+				A17243081C2F33AD00D43CC7 /* LatestEarthquakeTableViewCell.swift in Sources */,
 				A195DDD71C25E38B00DE100E /* HomeTableViewController.swift in Sources */,
+				A1B43F3A1C2F9BBE002233DD /* FlashcardsManagerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,12 +275,28 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		A17AA7601C2F17A6003BBC6E /* LatestEarthquakes.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A17AA7611C2F17A6003BBC6E /* Base */,
+			);
+			name = LatestEarthquakes.storyboard;
+			sourceTree = "<group>";
+		};
 		A195DDD31C25E22D00DE100E /* SesimicInfo.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A195DDD41C25E22D00DE100E /* Base */,
 			);
 			name = SesimicInfo.storyboard;
+			sourceTree = "<group>";
+		};
+		A1B43F351C2F9AA0002233DD /* Flashcards.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1B43F361C2F9AA0002233DD /* Base */,
+			);
+			name = Flashcards.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -337,12 +429,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A128D0961C1BA50A004C64C4 /* SeismicApp.xcdatamodeld */ = {
+		A1B43F4A1C2F9DA1002233DD /* SeismicApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A128D0971C1BA50A004C64C4 /* SeismicApp.xcdatamodel */,
+				A1B43F4B1C2F9DA1002233DD /* SeismicApp.xcdatamodel */,
 			);
-			currentVersion = A128D0971C1BA50A004C64C4 /* SeismicApp.xcdatamodel */;
+			currentVersion = A1B43F4B1C2F9DA1002233DD /* SeismicApp.xcdatamodel */;
 			path = SeismicApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

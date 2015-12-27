@@ -1,9 +1,9 @@
 //
 //  ParseClient.swift
-//  OnTheMap
+//  SeismicApp
 //
-//  Created by Boris Alexis Gonzalez Macias on 7/13/15.
-//  Copyright (c) 2015 PropiedadFacil. All rights reserved.
+//  Created by Boris Alexis Gonzalez Macias on 12/11/15.
+//  Copyright © 2015 Leandoers. All rights reserved.
 //
 
 import Foundation

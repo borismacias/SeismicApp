@@ -1,63 +1,35 @@
 //
-//  HomeTableViewController.swift
+//  QueEsTableViewController.swift
 //  SeismicApp
 //
-//  Created by Boris Alexis Gonzalez Macias on 12/19/15.
+//  Created by Boris Alexis Gonzalez Macias on 12/21/15.
 //  Copyright © 2015 Leandoers. All rights reserved.
 //
 
 import UIKit
 
-class HomeTableViewController: UITableViewController {
+class QueEsTableViewController: UITableViewController {
     
-    @IBAction func logout(){
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(nil, forKey:"objectId")
-        defaults.synchronize()
-        self.performSegueWithIdentifier("showLogin", sender: self)
-        
-    }
-    
-    @IBAction func unwindFromSignIn(unwindSegue:UIStoryboardSegue){
-    }
-    
-    @IBAction func unwindFromSignUp(unwindSegue:UIStoryboardSegue){
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.tableView.contentInset = UIEdgeInsetsMake(50, 0, 50, 0)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let userIDKey = "objectId"
-        let storedID = defaults.stringForKey(userIDKey)
-        if storedID == nil  {
-            self.performSegueWithIdentifier("showLogin", sender: self)
-        }
-    }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        // #warning Incomplete implementation, return the number of rows
+        return 3
     }
 
     /*
