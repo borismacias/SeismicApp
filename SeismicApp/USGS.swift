@@ -51,6 +51,7 @@ class USGS: NSObject {
                     let metadata = parsedData!["metadata"] as! [String:AnyObject]
                     let status = metadata["status"] as! Int
                     if status != 200{
+                        //If there was an api error, we send only the metadata - error cause to the handler
                         completionHandler(success: false, data: metadata)
                     }else{
                         var data = [String:AnyObject]()

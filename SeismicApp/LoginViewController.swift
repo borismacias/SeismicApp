@@ -15,6 +15,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var spinner:UIActivityIndicatorView!
     
     @IBAction func login(){
+        
+        //Showing the spinner after submitting the credentials to log in
         spinner = UIActivityIndicatorView()
         spinner.activityIndicatorViewStyle = .Gray
         spinner.center = view.center
@@ -24,8 +26,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         let username = usernameInput.text
         let password = passwordInput.text
+        
+        //Checking if the user filled both fields
         if(username?.characters.count == 0 || password?.characters.count == 0){
-            let alertController = UIAlertController.init(title: "Missing Fields", message: "You need to type in your email AND your password", preferredStyle: UIAlertControllerStyle.Alert)
+            let alertController = UIAlertController.init(title: "Error", message: "Debes ingresar tu nombre de usuario Y tu contraseña", preferredStyle: UIAlertControllerStyle.Alert)
             let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.Default,handler: nil)
             
             alertController.addAction(alertAction)
@@ -37,6 +41,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 "username": username!,
                 "password": password!
             ]
+            //Signing in through Parse API
             ParseClient.sharedInstance().signIn(userData,completionHandler: {
                 (success, data) -> Void in
                 dispatch_async(dispatch_get_main_queue(),{
@@ -48,8 +53,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                             message = data!["error"] as! String
                             Helpers.displayAlert(title, message: message, vc: self)
                         }else{
-                            title = "Success"
-                            message = "Logged In!"
+                            title = "Exito"
+                            message = "Conectado"
+                            //Storing the logged in user id
                             NSUserDefaults.standardUserDefaults().setObject(data!["objectId"], forKey: "objectId")
                             NSUserDefaults.standardUserDefaults().synchronize()
                             self.performSegueWithIdentifier("unwindFromSignIn", sender: self)
@@ -78,20 +84,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    //End editing after hitting the return key
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

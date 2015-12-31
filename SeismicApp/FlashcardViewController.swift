@@ -1,18 +1,24 @@
 //
-//  PlayFlashcardsViewController.swift
+//  FlashcardViewController.swift
 //  SeismicApp
 //
-//  Created by Boris Alexis Gonzalez Macias on 12/27/15.
+//  Created by Boris Alexis Gonzalez Macias on 12/30/15.
 //  Copyright © 2015 Leandoers. All rights reserved.
 //
 
 import UIKit
 
-class PlayFlashcardsViewController: UIViewController {
-
+class FlashcardViewController: UIViewController {
+    
+    var flashcard:Flashcard!
+    var level = 1
+    
+    @IBOutlet var flashcardImage:UIImageView!
+    @IBOutlet var button:UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        flashcardImage.image = flashcard.getImage()
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +27,12 @@ class PlayFlashcardsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showAnswer" {
+            let destinationVC = segue.destinationViewController as! AnswerViewController
+            destinationVC.flashcard = self.flashcard
+        }
+    }
 
     /*
     // MARK: - Navigation

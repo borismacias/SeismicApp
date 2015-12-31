@@ -22,6 +22,7 @@ class EarthquakeDetailViewController: UIViewController,MKMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Setting up the mapview to show the earthqake's epicenter
         mapview.showsTraffic = true
         mapview.showsCompass = true
         let formatter = NSDateFormatter()
@@ -37,8 +38,11 @@ class EarthquakeDetailViewController: UIViewController,MKMapViewDelegate {
         annotation.coordinate = CLLocationCoordinate2D.init(latitude: earthquake.lng, longitude: earthquake.lat)
         self.mapview.showAnnotations([annotation], animated: true)
         self.mapview.selectAnnotation(annotation, animated: true)
+        
+        //Customizing the zoom
         let span = MKCoordinateSpanMake(2, 2)
         let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: earthquake.lng, longitude: earthquake.lat), span: span)
+        
         self.mapview.setRegion(region, animated: true)
     }
 

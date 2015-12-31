@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signUp(){
         
+        //Setting up and adding a spinner
         spinner = UIActivityIndicatorView()
         spinner.activityIndicatorViewStyle = .Gray
         spinner.center = view.center
@@ -28,8 +29,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         let email = emailTextField.text
         let password = passwordTextField.text
         
+        //Checking if all the fields have been filled
         if(name?.characters.count == 0||email?.characters.count == 0||password?.characters.count == 0){
-            let alertViewController = UIAlertController.init(title: "Missing Fields", message: "You need to type in your name, email AND a password", preferredStyle: UIAlertControllerStyle.Alert)
+            let alertViewController = UIAlertController.init(title: "Error", message: "Debes escribir tu nombre de usuario, email Y contraseña", preferredStyle: UIAlertControllerStyle.Alert)
             let dismissAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
             alertViewController.addAction(dismissAction)
             self.presentViewController(alertViewController, animated: true, completion: nil)
@@ -39,6 +41,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 "email": email!,
                 "password": password!
             ]
+            //Executing parse signup function
             ParseClient.sharedInstance().signUp(userInfo, completionHandler: {
                 (success,data) -> Void in
                 
@@ -51,8 +54,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                             message = data!["error"] as! String
                             Helpers.displayAlert(title, message: message, vc: self)
                         }else{
+                            //Storing the user id from parse signup
                             NSUserDefaults.standardUserDefaults().setObject(data!["objectId"], forKey: "objectId")
                             NSUserDefaults.standardUserDefaults().synchronize()
+                            
                             self.performSegueWithIdentifier("unwindFromSignUp", sender: self)
                         }
                     }else{
@@ -83,20 +88,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    //End edit after hitting the return key
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false;
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

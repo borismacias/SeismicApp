@@ -6,43 +6,387 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Escalas-->
-        <scene sceneID="ttq-yq-YI9">
+        <!--Tab Bar Controller-->
+        <scene sceneID="nbn-lI-zcj">
             <objects>
-                <viewController id="J6F-bF-mQV" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QnQ-0W-63L"/>
-                        <viewControllerLayoutGuide type="bottom" id="FtQ-hB-IcO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Huz-29-TNy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Escalas" image="escalas" id="9Ga-lX-A3u"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="prA-rX-um4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController id="xbN-PD-JDP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="BgX-Kr-ZkA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="C7O-La-gcY" kind="relationship" relationship="viewControllers" id="TgV-WU-iX6"/>
+                        <segue destination="m07-uZ-J3M" kind="relationship" relationship="viewControllers" id="KKP-nK-E30"/>
+                        <segue destination="zms-Uv-Dtw" kind="relationship" relationship="viewControllers" id="MK4-us-bJr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SzI-cB-nBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-51" y="-651"/>
+            <point key="canvasLocation" x="-1277" y="87"/>
         </scene>
-        <!--Historia-->
-        <scene sceneID="gGq-fr-5c1">
+        <!--Lugares Seguros-->
+        <scene sceneID="FeK-NJ-n9X">
             <objects>
-                <viewController id="1iF-DB-7k5" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sTO-Cm-TLf"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ios-sc-9Zq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="REC-bg-4as">
+                <tableViewController id="C7O-La-gcY" customClass="HelperTableViewController" customModule="SeismicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qad-Ll-DmU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Historia" image="sismo" id="NmR-3d-EsR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WTk-rK-dQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <sections>
+                            <tableViewSection id="R9V-bg-yPa">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3eS-xj-zmY">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3eS-xj-zmY" id="ZYG-gx-PuX">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sismo" translatesAutoresizingMaskIntoConstraints="NO" id="na2-KQ-coA">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="GrN-Wb-wXc"/>
+                                                        <constraint firstAttribute="width" constant="50" id="V6Z-Np-xna"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALu-0n-b0t">
+                                                    <rect key="frame" x="98" y="116" width="474" height="67"/>
+                                                    <string key="text">Si durante un sismo estas en un interior las zonas de seguridad corresponden a las partes más resistentes de una buena construcción, las que suelen ser las esquinas, rincones, pilares y el área que queda bajo el marco de una puerta</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ALu-0n-b0t" firstAttribute="leading" secondItem="na2-KQ-coA" secondAttribute="trailing" constant="20" id="LI6-bO-Z3f"/>
+                                                <constraint firstItem="na2-KQ-coA" firstAttribute="leading" secondItem="ZYG-gx-PuX" secondAttribute="leadingMargin" constant="20" id="ObB-Ph-fua"/>
+                                                <constraint firstItem="na2-KQ-coA" firstAttribute="centerY" secondItem="ZYG-gx-PuX" secondAttribute="centerY" id="Sux-Hg-3IJ"/>
+                                                <constraint firstItem="ALu-0n-b0t" firstAttribute="centerY" secondItem="ZYG-gx-PuX" secondAttribute="centerY" id="pXr-x3-eq8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ALu-0n-b0t" secondAttribute="trailing" constant="20" id="vbD-oL-ZOc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.16648706899999999" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QSX-nm-pjb">
+                                        <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QSX-nm-pjb" id="Rqk-Dn-wbt">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box" translatesAutoresizingMaskIntoConstraints="NO" id="SOG-6V-iIc">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Bnr-QK-0n3"/>
+                                                        <constraint firstAttribute="width" constant="50" id="vHQ-12-PDg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7c-oB-eV1">
+                                                    <rect key="frame" x="98" y="116" width="474" height="67"/>
+                                                    <string key="text">Es muy importante que definas con anticipación un lugar de encuentro con tu grupo familiar en caso de un sismo, pues las comunicaciones pueden interrumpirse. Este lugar debe ser accesible para todos y seguro.</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SOG-6V-iIc" firstAttribute="centerY" secondItem="Rqk-Dn-wbt" secondAttribute="centerY" id="FXn-j3-crI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="G7c-oB-eV1" secondAttribute="trailing" constant="20" id="UKw-X9-kdJ"/>
+                                                <constraint firstItem="SOG-6V-iIc" firstAttribute="leading" secondItem="Rqk-Dn-wbt" secondAttribute="leadingMargin" constant="20" id="V7u-lc-KBn"/>
+                                                <constraint firstItem="G7c-oB-eV1" firstAttribute="leading" secondItem="SOG-6V-iIc" secondAttribute="trailing" constant="20" id="bkc-kQ-Rlh"/>
+                                                <constraint firstItem="G7c-oB-eV1" firstAttribute="centerY" secondItem="Rqk-Dn-wbt" secondAttribute="centerY" id="gMH-eq-KCU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="0.17000000000000001" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dXn-h7-OOp">
+                                        <rect key="frame" x="0.0" y="600" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dXn-h7-OOp" id="hvG-SF-PbG">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="IEB-6l-abL">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="jhL-78-HTo"/>
+                                                        <constraint firstAttribute="height" constant="50" id="uvI-Tb-D7g"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twt-1B-ZZp">
+                                                    <rect key="frame" x="98" y="116.5" width="474" height="67"/>
+                                                    <string key="text">Para personas con limitaciones de movimiento, el movimiento puede incrementar la dificultad para poder moverse o mantenerse equilibrado. Trata de llegar al piso en una posicion sentada y contra una pared. Proteje tu cabeza y cuello con tus brazos y manos.</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="twt-1B-ZZp" secondAttribute="trailing" constant="20" id="RF7-yi-hY6"/>
+                                                <constraint firstItem="IEB-6l-abL" firstAttribute="centerY" secondItem="hvG-SF-PbG" secondAttribute="centerY" id="Slr-Hq-dfG"/>
+                                                <constraint firstItem="twt-1B-ZZp" firstAttribute="leading" secondItem="IEB-6l-abL" secondAttribute="trailing" constant="20" id="mLc-kc-6Mw"/>
+                                                <constraint firstItem="twt-1B-ZZp" firstAttribute="centerY" secondItem="hvG-SF-PbG" secondAttribute="centerY" id="uBa-sn-cds"/>
+                                                <constraint firstItem="IEB-6l-abL" firstAttribute="leading" secondItem="hvG-SF-PbG" secondAttribute="leadingMargin" constant="20" id="yrk-uF-kqi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.16918103449999999" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="C7O-La-gcY" id="TMy-MT-UDj"/>
+                            <outlet property="delegate" destination="C7O-La-gcY" id="hBu-3d-j0m"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Lugares Seguros" image="sismo" id="6gu-yK-HKp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rex-hx-b0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="-623"/>
+            <point key="canvasLocation" x="-2123" y="80"/>
+        </scene>
+        <!--Kit-->
+        <scene sceneID="LVQ-74-74j">
+            <objects>
+                <tableViewController id="zms-Uv-Dtw" customClass="HelperTableViewController" customModule="SeismicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" id="oI5-wF-dIo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="Mdq-r8-pkV">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="H0C-Sp-PTn">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H0C-Sp-PTn" id="2WJ-2S-XFt">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="299.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxt-dV-Bnn">
+                                                    <rect key="frame" x="98" y="108" width="474" height="84"/>
+                                                    <string key="text">Los supermercados y la mayoria de los servicios durante un terremoto se encuentran cerrados, por lo que la posibilidad de abastecerse (comida, medicamentos, agua, etc.) sera nula por medio de estos medios. Además la electricidad, agua, gas y los sistemas telefonicos es altamente probable que no funcionen despues de un terremoto.</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sismo" translatesAutoresizingMaskIntoConstraints="NO" id="Y9W-O4-tZM">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Bjz-DN-ut2"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Kq5-RA-7bg"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hxt-dV-Bnn" firstAttribute="centerY" secondItem="2WJ-2S-XFt" secondAttribute="centerY" id="4tC-td-FcB"/>
+                                                <constraint firstItem="Y9W-O4-tZM" firstAttribute="centerY" secondItem="2WJ-2S-XFt" secondAttribute="centerY" id="Ii4-ws-w3y"/>
+                                                <constraint firstItem="Y9W-O4-tZM" firstAttribute="leading" secondItem="2WJ-2S-XFt" secondAttribute="leadingMargin" constant="20" id="OXH-AU-OKO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Hxt-dV-Bnn" secondAttribute="trailing" constant="20" id="mTd-p8-2to"/>
+                                                <constraint firstItem="Hxt-dV-Bnn" firstAttribute="leading" secondItem="Y9W-O4-tZM" secondAttribute="trailing" constant="20" id="ohE-kD-Kx9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.16648706899999999" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wjv-Yh-grJ">
+                                        <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wjv-Yh-grJ" id="WFn-bx-h24">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="299.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plJ-K9-qlk">
+                                                    <rect key="frame" x="98" y="116.5" width="474" height="67"/>
+                                                    <string key="text">Para estar preparado para un acontecimiento de este tipo, existe una lista de los siguientes elementos básicos que debes tener: Linterna a pilas,Radio a pilas,Pilas de repuesto, entre otros</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box" translatesAutoresizingMaskIntoConstraints="NO" id="ca6-bX-Tad">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Mbb-Pn-FS1"/>
+                                                        <constraint firstAttribute="width" constant="50" id="tSZ-C9-xBi"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="plJ-K9-qlk" secondAttribute="trailing" constant="20" id="Ssy-dd-y8V"/>
+                                                <constraint firstItem="plJ-K9-qlk" firstAttribute="leading" secondItem="ca6-bX-Tad" secondAttribute="trailing" constant="20" id="jGr-GI-mCc"/>
+                                                <constraint firstItem="plJ-K9-qlk" firstAttribute="centerY" secondItem="WFn-bx-h24" secondAttribute="centerY" id="oTX-Qv-3Be"/>
+                                                <constraint firstItem="ca6-bX-Tad" firstAttribute="centerY" secondItem="WFn-bx-h24" secondAttribute="centerY" id="pfN-34-Vty"/>
+                                                <constraint firstItem="ca6-bX-Tad" firstAttribute="leading" secondItem="WFn-bx-h24" secondAttribute="leadingMargin" constant="20" id="ycA-Wa-kgY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="0.17000000000000001" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DYC-lg-Qae">
+                                        <rect key="frame" x="0.0" y="600" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DYC-lg-Qae" id="jcU-vc-6BP">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="299.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sN9-Gz-Tno">
+                                                    <rect key="frame" x="98" y="74.5" width="474" height="150.5"/>
+                                                    <mutableString key="text">Como crear un extintor casero: Echar 4 cucharadas de bicarbonato sobre una servilleta y cerrarla como si se tratara de una bolsa, atándole con un poco de hilo de coser. Introducir unas 5 cucharadas de vinagre dentro de una botella plastica pequeña, colocar la pequeña bolsa dentro de la botella de manera que esta cuelgue sin tocar el vinagre, atándole con una parte del hilo hacia afuera. Colocar la tapa inmediatamente. En un lado de la botella, pegar con cinta un trozo de hilo atado a un alfiler capaz de perforar la botella. Con todo listo, al  agitar la botella y hacer un orificio en la tapa, por la cual se disparará la mezcla que apagará el fuego</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="1r6-cO-Xaj">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="6dB-sF-JpC"/>
+                                                        <constraint firstAttribute="height" constant="50" id="wHc-mK-2jU"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1r6-cO-Xaj" firstAttribute="leading" secondItem="jcU-vc-6BP" secondAttribute="leadingMargin" constant="20" id="4Mr-rH-6mD"/>
+                                                <constraint firstItem="sN9-Gz-Tno" firstAttribute="centerY" secondItem="jcU-vc-6BP" secondAttribute="centerY" id="QO6-ku-O46"/>
+                                                <constraint firstItem="1r6-cO-Xaj" firstAttribute="centerY" secondItem="jcU-vc-6BP" secondAttribute="centerY" id="WoX-UI-O3k"/>
+                                                <constraint firstItem="sN9-Gz-Tno" firstAttribute="leading" secondItem="1r6-cO-Xaj" secondAttribute="trailing" constant="20" id="vxr-h9-GuK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="sN9-Gz-Tno" secondAttribute="trailing" constant="20" id="weW-j7-9hv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.16918103449999999" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="zms-Uv-Dtw" id="PLf-Pv-gzb"/>
+                            <outlet property="delegate" destination="zms-Uv-Dtw" id="9VZ-c5-6VB"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Kit" image="box" id="Ve0-KW-xBc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6j-G0-yP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1277" y="-808"/>
+        </scene>
+        <!--¿Como Actuar?-->
+        <scene sceneID="QYI-R1-f2U">
+            <objects>
+                <tableViewController id="m07-uZ-J3M" customClass="HelperTableViewController" customModule="SeismicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" id="eNi-rb-0QH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="Qcq-D1-HPy">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bZq-jl-s11">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bZq-jl-s11" id="rg3-ta-54h">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56E-EK-0rj">
+                                                    <rect key="frame" x="98" y="116" width="474" height="67"/>
+                                                    <string key="text">En primer lugar debes mantener la calma y protegerte en un lugar seguro dentro del lugar donde te encuentres. Una vez que el sismo termine debes dirigirte a las vías de evacuación y recuerda no usar elevadores. Además estar preparado y tomar precauciones en tu vivienda</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sismo" translatesAutoresizingMaskIntoConstraints="NO" id="W6a-nZ-c5j">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="HeR-sv-r3J"/>
+                                                        <constraint firstAttribute="width" constant="50" id="N1W-Oe-kgh"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="W6a-nZ-c5j" firstAttribute="leading" secondItem="rg3-ta-54h" secondAttribute="leadingMargin" constant="20" id="ByZ-3M-kFk"/>
+                                                <constraint firstItem="56E-EK-0rj" firstAttribute="leading" secondItem="W6a-nZ-c5j" secondAttribute="trailing" constant="20" id="Vat-lA-sZc"/>
+                                                <constraint firstItem="W6a-nZ-c5j" firstAttribute="centerY" secondItem="rg3-ta-54h" secondAttribute="centerY" id="a4L-lA-3C3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="56E-EK-0rj" secondAttribute="trailing" constant="20" id="o05-Qq-oSr"/>
+                                                <constraint firstItem="56E-EK-0rj" firstAttribute="centerY" secondItem="rg3-ta-54h" secondAttribute="centerY" id="pw4-H8-Pke"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.16648706899999999" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9uq-rE-Wsi">
+                                        <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9uq-rE-Wsi" id="b9j-sd-ixr">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box" translatesAutoresizingMaskIntoConstraints="NO" id="xEI-tH-thT">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Cle-gO-Kop"/>
+                                                        <constraint firstAttribute="height" constant="50" id="eBO-TA-csD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTg-7q-nBW">
+                                                    <rect key="frame" x="98" y="116" width="474" height="67"/>
+                                                    <string key="text">En primer lugar debes mantener la calma y protegerte en un lugar seguro dentro del lugar donde te encuentres. Una vez que el sismo termine debes dirigirte a las vías de evacuación y recuerda no usar elevadores. Además estar preparado y tomar precauciones en tu vivienda</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lTg-7q-nBW" firstAttribute="leading" secondItem="xEI-tH-thT" secondAttribute="trailing" constant="20" id="7EL-mq-ZEn"/>
+                                                <constraint firstItem="xEI-tH-thT" firstAttribute="leading" secondItem="b9j-sd-ixr" secondAttribute="leadingMargin" constant="20" id="M6W-LZ-lEw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lTg-7q-nBW" secondAttribute="trailing" constant="20" id="VIx-Us-4dE"/>
+                                                <constraint firstItem="xEI-tH-thT" firstAttribute="centerY" secondItem="b9j-sd-ixr" secondAttribute="centerY" id="boT-TK-19R"/>
+                                                <constraint firstItem="lTg-7q-nBW" firstAttribute="centerY" secondItem="b9j-sd-ixr" secondAttribute="centerY" id="pEp-U8-aTU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="0.17000000000000001" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="YUS-I1-ELJ">
+                                        <rect key="frame" x="0.0" y="600" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YUS-I1-ELJ" id="oB8-vB-8Ue">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="aPe-WE-OlW">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="V2L-8g-qrh"/>
+                                                        <constraint firstAttribute="width" constant="50" id="zjG-NE-Wnt"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-ct-qcs">
+                                                    <rect key="frame" x="98" y="116.5" width="474" height="67"/>
+                                                    <string key="text">En primer lugar debes mantener la calma y protegerte en un lugar seguro dentro del lugar donde te encuentres. Una vez que el sismo termine debes dirigirte a las vías de evacuación y recuerda no usar elevadores. Además estar preparado y tomar precauciones en tu vivienda</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aPe-WE-OlW" firstAttribute="centerY" secondItem="oB8-vB-8Ue" secondAttribute="centerY" id="Eta-ys-KPh"/>
+                                                <constraint firstItem="Cyt-ct-qcs" firstAttribute="centerY" secondItem="oB8-vB-8Ue" secondAttribute="centerY" id="UQZ-IS-vmn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Cyt-ct-qcs" secondAttribute="trailing" constant="20" id="bgv-ms-6PX"/>
+                                                <constraint firstItem="Cyt-ct-qcs" firstAttribute="leading" secondItem="aPe-WE-OlW" secondAttribute="trailing" constant="20" id="hAO-jN-9JK"/>
+                                                <constraint firstItem="aPe-WE-OlW" firstAttribute="leading" secondItem="oB8-vB-8Ue" secondAttribute="leadingMargin" constant="20" id="sxW-PM-L8t"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.16918103449999999" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="m07-uZ-J3M" id="svY-z3-jKU"/>
+                            <outlet property="delegate" destination="m07-uZ-J3M" id="6cc-hx-96d"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="¿Como Actuar?" image="asd" id="Dal-za-hpa"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8eS-sk-9ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271" y="1078"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="qBv-0e-CVG">
@@ -99,6 +443,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="xbN-PD-JDP" kind="show" id="Gxs-nd-xRq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -113,12 +460,132 @@
             </objects>
             <point key="canvasLocation" x="-365" y="80"/>
         </scene>
+        <!--Richter-->
+        <scene sceneID="glI-O7-dy0">
+            <objects>
+                <tableViewController id="fqL-cw-iEQ" customClass="HelperTableViewController" customModule="SeismicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" id="kXB-7H-617">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="IJa-Hn-iAy">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e6a-nO-Djq">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e6a-nO-Djq" id="YmR-Cz-PuR">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sismo" translatesAutoresizingMaskIntoConstraints="NO" id="lwB-XN-z1P">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Qfz-xt-z6x"/>
+                                                        <constraint firstAttribute="height" constant="50" id="VfY-4R-UO3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imE-5S-Mn0">
+                                                    <rect key="frame" x="98" y="116" width="474" height="67"/>
+                                                    <string key="text">La escala de Richter fue creada en 1935 por Charles Richter, sismólogo nacido en 1900.  Richter quería desarrollar una manera cuantitativa de comparar terremotos, que no dependiera de la localización del observador</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lwB-XN-z1P" firstAttribute="leading" secondItem="YmR-Cz-PuR" secondAttribute="leadingMargin" constant="20" id="6jz-Pr-uDL"/>
+                                                <constraint firstItem="lwB-XN-z1P" firstAttribute="centerY" secondItem="YmR-Cz-PuR" secondAttribute="centerY" id="HkX-mI-FQy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="imE-5S-Mn0" secondAttribute="trailing" constant="20" id="Mtx-N0-Q9m"/>
+                                                <constraint firstItem="imE-5S-Mn0" firstAttribute="leading" secondItem="lwB-XN-z1P" secondAttribute="trailing" constant="20" id="cj3-Fp-LBm"/>
+                                                <constraint firstItem="imE-5S-Mn0" firstAttribute="centerY" secondItem="YmR-Cz-PuR" secondAttribute="centerY" id="f8b-ts-HeA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.16648706899999999" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wFV-ja-Api">
+                                        <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wFV-ja-Api" id="5En-Az-umN">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box" translatesAutoresizingMaskIntoConstraints="NO" id="8hG-Rv-sFj">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="W1h-x8-BPq"/>
+                                                        <constraint firstAttribute="width" constant="50" id="x29-mq-aDV"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-eN-Uil">
+                                                    <rect key="frame" x="98" y="108" width="474" height="84"/>
+                                                    <string key="text">A diferencia de la escala de Mercalli, la de Richter mide la fuerza de los terremotos de acuerdo a su magnitud, es decir, la cantidad de energía liberada durante el sismo. Esta medición se realiza utilizando los datos que entregan los sismógrafos, aparatos encargados de registra las ondas sísmicas. Por lo mismo, no tiene un límite de grados.</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8hG-Rv-sFj" firstAttribute="leading" secondItem="5En-Az-umN" secondAttribute="leadingMargin" constant="20" id="8dG-pB-Iom"/>
+                                                <constraint firstItem="8hG-Rv-sFj" firstAttribute="centerY" secondItem="5En-Az-umN" secondAttribute="centerY" id="I3a-BO-7qh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ReH-eN-Uil" secondAttribute="trailing" constant="20" id="LJU-kO-e7h"/>
+                                                <constraint firstItem="ReH-eN-Uil" firstAttribute="centerY" secondItem="5En-Az-umN" secondAttribute="centerY" id="qQ7-CC-whW"/>
+                                                <constraint firstItem="ReH-eN-Uil" firstAttribute="leading" secondItem="8hG-Rv-sFj" secondAttribute="trailing" constant="20" id="wGY-bM-2ps"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="0.17000000000000001" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Qgf-JN-WIZ">
+                                        <rect key="frame" x="0.0" y="600" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qgf-JN-WIZ" id="bVL-HY-o04">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="TW1-iu-8ib">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="H15-cF-2Tm"/>
+                                                        <constraint firstAttribute="width" constant="50" id="UWC-87-tT3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpk-QL-U6L">
+                                                    <rect key="frame" x="98" y="108" width="474" height="84"/>
+                                                    <string key="text">Hasta el momento, la mayor magnitud registrada en el mundo corresponde a 9,5 grados, para el terremoto que ocurrió en Valdivia, Chile, en 1960. Si hubiera un terremoto de magnitud 10 grados, esto seria equivalente a  el choque de un meteorito rocoso de 2 km de diámetro que impacte a 25 km/s (90.000 km/h)</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lpk-QL-U6L" secondAttribute="trailing" constant="20" id="2sf-cx-owP"/>
+                                                <constraint firstItem="TW1-iu-8ib" firstAttribute="leading" secondItem="bVL-HY-o04" secondAttribute="leadingMargin" constant="20" id="Lkf-1w-ZmI"/>
+                                                <constraint firstItem="TW1-iu-8ib" firstAttribute="centerY" secondItem="bVL-HY-o04" secondAttribute="centerY" id="SVu-kb-qNP"/>
+                                                <constraint firstItem="lpk-QL-U6L" firstAttribute="centerY" secondItem="bVL-HY-o04" secondAttribute="centerY" id="e9k-Sb-VQG"/>
+                                                <constraint firstItem="lpk-QL-U6L" firstAttribute="leading" secondItem="TW1-iu-8ib" secondAttribute="trailing" constant="20" id="zk8-eL-1Q3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.16918103449999999" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="fqL-cw-iEQ" id="QR3-LV-lff"/>
+                            <outlet property="delegate" destination="fqL-cw-iEQ" id="FYO-3D-W4X"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Richter" image="sismo" id="qFB-fg-g1p"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3W-Dt-0g4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525" y="-701"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="18v-Sn-Woz">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ixt-bG-fJR" sceneMemberID="viewController">
+                <tabBarController id="Ixt-bG-fJR" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="k8w-gn-hGU">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -126,68 +593,139 @@
                     <connections>
                         <segue destination="GQw-tl-VC1" kind="relationship" relationship="viewControllers" id="hee-pl-xzx"/>
                         <segue destination="YD0-qD-Ndk" kind="relationship" relationship="viewControllers" id="2Ju-ww-gOi"/>
-                        <segue destination="qr3-0F-S7a" kind="relationship" relationship="viewControllers" id="rV1-R4-2wh"/>
-                        <segue destination="J6F-bF-mQV" kind="relationship" relationship="viewControllers" id="Nhg-Ug-LuC"/>
-                        <segue destination="1iF-DB-7k5" kind="relationship" relationship="viewControllers" id="im7-yg-b7y"/>
+                        <segue destination="fqL-cw-iEQ" kind="relationship" relationship="viewControllers" id="wkJ-DA-AdP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6y-uT-lZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="525" y="87"/>
         </scene>
-        <!--Sismos-->
-        <scene sceneID="FUg-lQ-Itm">
-            <objects>
-                <viewController id="qr3-0F-S7a" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="k1I-hl-Icn"/>
-                        <viewControllerLayoutGuide type="bottom" id="31q-19-fTR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fOL-jp-e3s">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Sismos" image="box" id="RxN-tq-jnm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4qd-7i-3ov" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-87" y="1260"/>
-        </scene>
-        <!--¿Por que?-->
+        <!--Mercalli-->
         <scene sceneID="wk3-t5-TSF">
             <objects>
-                <tableViewController id="YD0-qD-Ndk" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xRv-6c-rlz">
+                <tableViewController id="YD0-qD-Ndk" customClass="HelperTableViewController" customModule="SeismicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" id="xRv-6c-rlz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="037-1w-hcg">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="037-1w-hcg" id="4JC-gE-I0f">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <sections>
+                            <tableViewSection id="S5j-Ra-PmO">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="037-1w-hcg">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="037-1w-hcg" id="4JC-gE-I0f">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sismo" translatesAutoresizingMaskIntoConstraints="NO" id="u1E-qo-hpy">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="P37-Kz-a2s"/>
+                                                        <constraint firstAttribute="width" constant="50" id="lHw-vl-UQh"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b76-ax-2uu">
+                                                    <rect key="frame" x="98" y="125" width="474" height="50.5"/>
+                                                    <string key="text">Es una escala de 12 puntos, identificados cada uno de ellos por números romanos, desarrollada para evaluar la intensidad de los terremotos a través  de los efectos y daños causados a distintas estructuras</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="b76-ax-2uu" secondAttribute="trailing" constant="20" id="K1G-vS-kEj"/>
+                                                <constraint firstItem="b76-ax-2uu" firstAttribute="leading" secondItem="u1E-qo-hpy" secondAttribute="trailing" constant="20" id="MVm-MH-xV8"/>
+                                                <constraint firstItem="u1E-qo-hpy" firstAttribute="leading" secondItem="4JC-gE-I0f" secondAttribute="leadingMargin" constant="20" id="VEL-We-Asy"/>
+                                                <constraint firstItem="b76-ax-2uu" firstAttribute="centerY" secondItem="4JC-gE-I0f" secondAttribute="centerY" id="aXh-9a-JXg"/>
+                                                <constraint firstItem="u1E-qo-hpy" firstAttribute="centerY" secondItem="4JC-gE-I0f" secondAttribute="centerY" id="wVl-0Q-xlT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.16648706899999999" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TVG-8G-E6z">
+                                        <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TVG-8G-E6z" id="OeY-pv-MG2">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box" translatesAutoresizingMaskIntoConstraints="NO" id="FoW-Ri-snQ">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="2CQ-v8-ybe"/>
+                                                        <constraint firstAttribute="height" constant="50" id="wvE-ya-7Qv"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3D-c5-ZJM">
+                                                    <rect key="frame" x="98" y="108" width="474" height="84"/>
+                                                    <string key="text">La escala de Mercallil evalua la intensidad de los terremotos a traves de los efectos y daños causados a distintas estructuras (casas, edificios, etc), debido a esto en un país puede haber una mayor escala de Mercalli que en otro pais a pesar de que hayan sufrido un temblor de igual magnitud sismica (en escala de Richter por ejemplo.)</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="u3D-c5-ZJM" secondAttribute="trailing" constant="20" id="2ka-Ac-WnZ"/>
+                                                <constraint firstItem="u3D-c5-ZJM" firstAttribute="centerY" secondItem="OeY-pv-MG2" secondAttribute="centerY" id="8tL-gN-ZTM"/>
+                                                <constraint firstItem="u3D-c5-ZJM" firstAttribute="leading" secondItem="FoW-Ri-snQ" secondAttribute="trailing" constant="20" id="BYI-Dk-qgX"/>
+                                                <constraint firstItem="FoW-Ri-snQ" firstAttribute="leading" secondItem="OeY-pv-MG2" secondAttribute="leadingMargin" constant="20" id="Gli-aJ-Vdh"/>
+                                                <constraint firstItem="FoW-Ri-snQ" firstAttribute="centerY" secondItem="OeY-pv-MG2" secondAttribute="centerY" id="gQE-nV-tmv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="0.17000000000000001" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Vab-LU-1nt">
+                                        <rect key="frame" x="0.0" y="600" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vab-LU-1nt" id="oMO-SP-Kfy">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="kkH-fh-rPN">
+                                                    <rect key="frame" x="28" y="125" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Y45-Se-RQs"/>
+                                                        <constraint firstAttribute="width" constant="50" id="xMX-gj-kqX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWo-YP-ER4">
+                                                    <rect key="frame" x="98" y="125" width="474" height="50.5"/>
+                                                    <string key="text">Sabia usted que a pesar de su creación en el año 1906 por Giuseppe Mercalli, el ultimo cambio que tuvo esta escala fue hecho por Charles Richter el mismo creador de la escala de intensidad sismica.</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zWo-YP-ER4" firstAttribute="leading" secondItem="kkH-fh-rPN" secondAttribute="trailing" constant="20" id="4K0-sT-PUh"/>
+                                                <constraint firstItem="kkH-fh-rPN" firstAttribute="leading" secondItem="oMO-SP-Kfy" secondAttribute="leadingMargin" constant="20" id="ccj-8A-s0v"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zWo-YP-ER4" secondAttribute="trailing" constant="20" id="nW0-2j-gpD"/>
+                                                <constraint firstItem="zWo-YP-ER4" firstAttribute="centerY" secondItem="oMO-SP-Kfy" secondAttribute="centerY" id="poI-5u-Hnd"/>
+                                                <constraint firstItem="kkH-fh-rPN" firstAttribute="centerY" secondItem="oMO-SP-Kfy" secondAttribute="centerY" id="r8L-er-5i8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.16918103449999999" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="YD0-qD-Ndk" id="9Tu-uO-6PC"/>
                             <outlet property="delegate" destination="YD0-qD-Ndk" id="61E-cO-gPB"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="¿Por que?" image="historia" id="iwQ-mW-0YN"/>
+                    <tabBarItem key="tabBarItem" title="Mercalli" image="historia" id="iwQ-mW-0YN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yU2-QN-wvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061" y="436"/>
+            <point key="canvasLocation" x="1382" y="80"/>
         </scene>
-        <!--¿Que es?-->
+        <!--Sismos-->
         <scene sceneID="Ich-6j-f3f">
             <objects>
-                <tableViewController id="GQw-tl-VC1" customClass="QueEsTableViewController" customModule="SeismicApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="175" sectionHeaderHeight="28" sectionFooterHeight="28" id="LXj-KI-exK">
+                <tableViewController id="GQw-tl-VC1" customClass="HelperTableViewController" customModule="SeismicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" id="LXj-KI-exK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -195,24 +733,24 @@
                             <tableViewSection id="NdX-5z-yEJ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" id="Ede-Ar-fTs" userLabel="I">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="175"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ede-Ar-fTs" id="6h3-17-Oxz">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="175"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sismo" translatesAutoresizingMaskIntoConstraints="NO" id="Yhe-tk-sVS">
-                                                    <rect key="frame" x="20" y="62.5" width="50" height="50"/>
+                                                    <rect key="frame" x="20" y="125" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="26c-lU-tcH"/>
                                                         <constraint firstAttribute="height" constant="50" id="3ro-JG-p8t"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iV4-zW-jtm">
-                                                    <rect key="frame" x="90" y="72" width="482" height="50.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iV4-zW-jtm">
+                                                    <rect key="frame" x="90" y="135" width="482" height="50.5"/>
                                                     <string key="text">Los sismos son perturbaciones súbitas en el interior de la tierra que dan origen a vibraciones en suelo. 
 </string>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -228,23 +766,23 @@
                                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.16648706899999999" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" id="OPn-eF-bVo">
-                                        <rect key="frame" x="0.0" y="239" width="600" height="175"/>
+                                        <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OPn-eF-bVo" id="v1z-Iw-r3K">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="175"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box" translatesAutoresizingMaskIntoConstraints="NO" id="PLf-DA-FZ5">
-                                                    <rect key="frame" x="20" y="62.5" width="50" height="50"/>
+                                                    <rect key="frame" x="20" y="125" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="foS-Al-olH"/>
                                                         <constraint firstAttribute="width" constant="50" id="tDm-hZ-lhz"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-qP-Lqb">
-                                                    <rect key="frame" x="90" y="62" width="482" height="50.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-qP-Lqb">
+                                                    <rect key="frame" x="90" y="125" width="482" height="50.5"/>
                                                     <string key="text">Existen zonas que tienen una mayor tendencia a sufrir sismos. Se trata de aquellas regiones donde la concentración de fuerzas generada por  los límites de las placas tectónicas </string>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -260,23 +798,23 @@
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="0.17000000000000001" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell3" id="Z5l-9e-vOy">
-                                        <rect key="frame" x="0.0" y="414" width="600" height="175"/>
+                                        <rect key="frame" x="0.0" y="600" width="600" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z5l-9e-vOy" id="XvZ-4X-pf6">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="175"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="jdd-eo-mEm">
-                                                    <rect key="frame" x="20" y="63" width="50" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="jdd-eo-mEm">
+                                                    <rect key="frame" x="20" y="125" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="bwK-vK-7HD"/>
                                                         <constraint firstAttribute="height" constant="50" id="mfg-uf-sHd"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWU-1E-a8h">
-                                                    <rect key="frame" x="90" y="63" width="482" height="50.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWU-1E-a8h">
+                                                    <rect key="frame" x="90" y="116" width="482" height="67"/>
                                                     <string key="text">El fenómeno sísmico es similar al hecho de lanzar un objeto a un estanque de agua. En ese caso la energía liberada por el choque del objeto con la superficie de agua se manifiesta a través de una serie de ondas que se alejan de forma concéntrica al lugar donde cayó el objeto</string>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -299,19 +837,18 @@
                             <outlet property="delegate" destination="GQw-tl-VC1" id="SoF-zf-UGx"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="¿Que es?" image="asd" id="C4N-SA-9ip"/>
+                    <tabBarItem key="tabBarItem" title="Sismos" image="asd" id="C4N-SA-9ip"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUD-Ih-voF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810" y="1140"/>
+            <point key="canvasLocation" x="525" y="1140"/>
         </scene>
     </scenes>
     <resources>
         <image name="asd" width="25" height="25"/>
         <image name="box" width="28" height="32"/>
-        <image name="escalas" width="27" height="28"/>
         <image name="historia" width="21" height="30"/>
+        <image name="new" width="24" height="23"/>
         <image name="sismo" width="20" height="27"/>
-        <image name="sun" width="102" height="42"/>
     </resources>
 </document>

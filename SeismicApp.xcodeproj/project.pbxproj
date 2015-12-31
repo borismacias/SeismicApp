@@ -13,22 +13,36 @@
 		A128D0951C1BA50A004C64C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A128D0931C1BA50A004C64C4 /* Main.storyboard */; };
 		A128D09A1C1BA50A004C64C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A128D0991C1BA50A004C64C4 /* Assets.xcassets */; };
 		A128D09D1C1BA50A004C64C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A128D09B1C1BA50A004C64C4 /* LaunchScreen.storyboard */; };
+		A150E06A1C341D22003DD480 /* FlashcardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150E0691C341D22003DD480 /* FlashcardTableViewCell.swift */; };
+		A150E06C1C3440EA003DD480 /* FlashcardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150E06B1C3440EA003DD480 /* FlashcardDetailViewController.swift */; };
+		A150E06E1C345ED3003DD480 /* PlayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150E06D1C345ED3003DD480 /* PlayTableViewController.swift */; };
+		A150E0701C34629F003DD480 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150E06F1C34629F003DD480 /* GameViewController.swift */; };
 		A17243081C2F33AD00D43CC7 /* LatestEarthquakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17243071C2F33AD00D43CC7 /* LatestEarthquakeTableViewCell.swift */; };
 		A17AA75D1C2F1225003BBC6E /* USGS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17AA75C1C2F1225003BBC6E /* USGS.swift */; };
 		A17AA75F1C2F12FD003BBC6E /* Earthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17AA75E1C2F12FD003BBC6E /* Earthquake.swift */; };
 		A17AA7621C2F17A6003BBC6E /* LatestEarthquakes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17AA7601C2F17A6003BBC6E /* LatestEarthquakes.storyboard */; };
 		A17AA7641C2F17F2003BBC6E /* LatestEarthquakesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17AA7631C2F17F2003BBC6E /* LatestEarthquakesTableViewController.swift */; };
-		A18311551C28AA2B0073ADE5 /* QueEsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18311541C28AA2B0073ADE5 /* QueEsTableViewController.swift */; };
-		A18311571C28AA3A0073ADE5 /* PorQueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18311561C28AA3A0073ADE5 /* PorQueTableViewController.swift */; };
 		A195DDD51C25E22D00DE100E /* SesimicInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A195DDD31C25E22D00DE100E /* SesimicInfo.storyboard */; };
 		A195DDD71C25E38B00DE100E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A195DDD61C25E38B00DE100E /* HomeTableViewController.swift */; };
 		A1B43F321C2F455A002233DD /* EarthquakeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F311C2F455A002233DD /* EarthquakeDetailViewController.swift */; };
-		A1B43F371C2F9AA0002233DD /* Flashcards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B43F351C2F9AA0002233DD /* Flashcards.storyboard */; };
-		A1B43F3A1C2F9BBE002233DD /* FlashcardsManagerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F391C2F9BBE002233DD /* FlashcardsManagerTableViewController.swift */; };
-		A1B43F3C1C2F9BD2002233DD /* NewFlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F3B1C2F9BD2002233DD /* NewFlashcardViewController.swift */; };
-		A1B43F3E1C2F9BE2002233DD /* PlayFlashcardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F3D1C2F9BE2002233DD /* PlayFlashcardsViewController.swift */; };
-		A1B43F401C2F9C02002233DD /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F3F1C2F9C02002233DD /* Flashcard.swift */; };
+		A1B43F371C2F9AA0002233DD /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B43F351C2F9AA0002233DD /* Quiz.storyboard */; };
+		A1B43F3A1C2F9BBE002233DD /* QuizManagerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F391C2F9BBE002233DD /* QuizManagerTableViewController.swift */; };
+		A1B43F3C1C2F9BD2002233DD /* NewQuizTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F3B1C2F9BD2002233DD /* NewQuizTableViewController.swift */; };
+		A1B43F3E1C2F9BE2002233DD /* PlayQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F3D1C2F9BE2002233DD /* PlayQuizViewController.swift */; };
+		A1B43F401C2F9C02002233DD /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F3F1C2F9C02002233DD /* Quiz.swift */; };
 		A1B43F4C1C2F9DA1002233DD /* SeismicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F4A1C2F9DA1002233DD /* SeismicApp.xcdatamodeld */; };
+		A1B43F4E1C30E7AE002233DD /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F4D1C30E7AE002233DD /* QuizViewController.swift */; };
+		A1B43F501C31603E002233DD /* ShowQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F4F1C31603E002233DD /* ShowQuizViewController.swift */; };
+		A1B43F541C31E852002233DD /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F531C31E852002233DD /* Deck.swift */; };
+		A1B43F561C31E888002233DD /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F551C31E888002233DD /* Flashcard.swift */; };
+		A1B43F591C3202F1002233DD /* Flashcard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B43F571C3202F1002233DD /* Flashcard.storyboard */; };
+		A1B43F5B1C320FEC002233DD /* DeckManagerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F5A1C320FEC002233DD /* DeckManagerTableViewController.swift */; };
+		A1B43F5D1C3211FA002233DD /* ShowDeckTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F5C1C3211FA002233DD /* ShowDeckTableViewController.swift */; };
+		A1B43F621C3214BC002233DD /* AddDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F611C3214BC002233DD /* AddDeckViewController.swift */; };
+		A1B43F641C3214CB002233DD /* AddFlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B43F631C3214CB002233DD /* AddFlashcardViewController.swift */; };
+		A1BF8E111C3493600034BEED /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF8E101C3493600034BEED /* FlashcardViewController.swift */; };
+		A1BF8E131C34B16B0034BEED /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF8E121C34B16B0034BEED /* AnswerViewController.swift */; };
+		A1BF8E151C34CC170034BEED /* HelperTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF8E141C34CC170034BEED /* HelperTableViewController.swift */; };
 		A1E180211C27003F00AE6759 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E180201C27003F00AE6759 /* Helpers.swift */; };
 		A1F947411C25FCFA00A685E0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F947401C25FCFA00A685E0 /* SignUpViewController.swift */; };
 		A1F947441C260FC300A685E0 /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F947431C260FC300A685E0 /* ParseClient.swift */; };
@@ -44,22 +58,36 @@
 		A128D0991C1BA50A004C64C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A128D09C1C1BA50A004C64C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A128D09E1C1BA50A004C64C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A150E0691C341D22003DD480 /* FlashcardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardTableViewCell.swift; sourceTree = "<group>"; };
+		A150E06B1C3440EA003DD480 /* FlashcardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardDetailViewController.swift; sourceTree = "<group>"; };
+		A150E06D1C345ED3003DD480 /* PlayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayTableViewController.swift; sourceTree = "<group>"; };
+		A150E06F1C34629F003DD480 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A17243071C2F33AD00D43CC7 /* LatestEarthquakeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestEarthquakeTableViewCell.swift; sourceTree = "<group>"; };
 		A17AA75C1C2F1225003BBC6E /* USGS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USGS.swift; sourceTree = "<group>"; };
 		A17AA75E1C2F12FD003BBC6E /* Earthquake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Earthquake.swift; sourceTree = "<group>"; };
 		A17AA7611C2F17A6003BBC6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LatestEarthquakes.storyboard; sourceTree = "<group>"; };
 		A17AA7631C2F17F2003BBC6E /* LatestEarthquakesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestEarthquakesTableViewController.swift; sourceTree = "<group>"; };
-		A18311541C28AA2B0073ADE5 /* QueEsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueEsTableViewController.swift; sourceTree = "<group>"; };
-		A18311561C28AA3A0073ADE5 /* PorQueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PorQueTableViewController.swift; sourceTree = "<group>"; };
 		A195DDD41C25E22D00DE100E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SesimicInfo.storyboard; sourceTree = "<group>"; };
 		A195DDD61C25E38B00DE100E /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		A1B43F311C2F455A002233DD /* EarthquakeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthquakeDetailViewController.swift; sourceTree = "<group>"; };
-		A1B43F361C2F9AA0002233DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Flashcards.storyboard; sourceTree = "<group>"; };
-		A1B43F391C2F9BBE002233DD /* FlashcardsManagerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardsManagerTableViewController.swift; sourceTree = "<group>"; };
-		A1B43F3B1C2F9BD2002233DD /* NewFlashcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFlashcardViewController.swift; sourceTree = "<group>"; };
-		A1B43F3D1C2F9BE2002233DD /* PlayFlashcardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayFlashcardsViewController.swift; sourceTree = "<group>"; };
-		A1B43F3F1C2F9C02002233DD /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
+		A1B43F361C2F9AA0002233DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Quiz.storyboard; sourceTree = "<group>"; };
+		A1B43F391C2F9BBE002233DD /* QuizManagerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizManagerTableViewController.swift; sourceTree = "<group>"; };
+		A1B43F3B1C2F9BD2002233DD /* NewQuizTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuizTableViewController.swift; sourceTree = "<group>"; };
+		A1B43F3D1C2F9BE2002233DD /* PlayQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayQuizViewController.swift; sourceTree = "<group>"; };
+		A1B43F3F1C2F9C02002233DD /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		A1B43F4B1C2F9DA1002233DD /* SeismicApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SeismicApp.xcdatamodel; sourceTree = "<group>"; };
+		A1B43F4D1C30E7AE002233DD /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		A1B43F4F1C31603E002233DD /* ShowQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowQuizViewController.swift; sourceTree = "<group>"; };
+		A1B43F531C31E852002233DD /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		A1B43F551C31E888002233DD /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
+		A1B43F581C3202F1002233DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Flashcard.storyboard; sourceTree = "<group>"; };
+		A1B43F5A1C320FEC002233DD /* DeckManagerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckManagerTableViewController.swift; sourceTree = "<group>"; };
+		A1B43F5C1C3211FA002233DD /* ShowDeckTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDeckTableViewController.swift; sourceTree = "<group>"; };
+		A1B43F611C3214BC002233DD /* AddDeckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDeckViewController.swift; sourceTree = "<group>"; };
+		A1B43F631C3214CB002233DD /* AddFlashcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFlashcardViewController.swift; sourceTree = "<group>"; };
+		A1BF8E101C3493600034BEED /* FlashcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
+		A1BF8E121C34B16B0034BEED /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		A1BF8E141C34CC170034BEED /* HelperTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperTableViewController.swift; sourceTree = "<group>"; };
 		A1E180201C27003F00AE6759 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		A1F947401C25FCFA00A685E0 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A1F947431C260FC300A685E0 /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
@@ -96,13 +124,15 @@
 		A128D08E1C1BA50A004C64C4 /* SeismicApp */ = {
 			isa = PBXGroup;
 			children = (
-				A1B43F381C2F9B9E002233DD /* FlashcardsVCs */,
+				A1FE4CCD1C337426009B4E48 /* Model */,
+				A1B43F5E1C321399002233DD /* DeckVCs */,
+				A1B43F381C2F9B9E002233DD /* QuizVCs */,
 				A17AA75B1C2F1210003BBC6E /* USGS */,
-				A18311531C28A9F70073ADE5 /* SismosVCs */,
 				A1F947421C260F4A00A685E0 /* Parse */,
 				A128D08F1C1BA50A004C64C4 /* AppDelegate.swift */,
 				A128D0931C1BA50A004C64C4 /* Main.storyboard */,
-				A1B43F351C2F9AA0002233DD /* Flashcards.storyboard */,
+				A1B43F571C3202F1002233DD /* Flashcard.storyboard */,
+				A1B43F351C2F9AA0002233DD /* Quiz.storyboard */,
 				A17AA7601C2F17A6003BBC6E /* LatestEarthquakes.storyboard */,
 				A195DDD31C25E22D00DE100E /* SesimicInfo.storyboard */,
 				A103BC5C1C25BC2E008D9805 /* LoginViewController.swift */,
@@ -118,8 +148,7 @@
 				A17AA7631C2F17F2003BBC6E /* LatestEarthquakesTableViewController.swift */,
 				A17243071C2F33AD00D43CC7 /* LatestEarthquakeTableViewCell.swift */,
 				A1B43F311C2F455A002233DD /* EarthquakeDetailViewController.swift */,
-				A1B43F3F1C2F9C02002233DD /* Flashcard.swift */,
-				A1B43F4A1C2F9DA1002233DD /* SeismicApp.xcdatamodeld */,
+				A1BF8E141C34CC170034BEED /* HelperTableViewController.swift */,
 			);
 			path = SeismicApp;
 			sourceTree = "<group>";
@@ -132,23 +161,33 @@
 			name = USGS;
 			sourceTree = "<group>";
 		};
-		A18311531C28A9F70073ADE5 /* SismosVCs */ = {
+		A1B43F381C2F9B9E002233DD /* QuizVCs */ = {
 			isa = PBXGroup;
 			children = (
-				A18311541C28AA2B0073ADE5 /* QueEsTableViewController.swift */,
-				A18311561C28AA3A0073ADE5 /* PorQueTableViewController.swift */,
+				A1B43F391C2F9BBE002233DD /* QuizManagerTableViewController.swift */,
+				A1B43F3B1C2F9BD2002233DD /* NewQuizTableViewController.swift */,
+				A1B43F3D1C2F9BE2002233DD /* PlayQuizViewController.swift */,
+				A1B43F4D1C30E7AE002233DD /* QuizViewController.swift */,
+				A1B43F4F1C31603E002233DD /* ShowQuizViewController.swift */,
 			);
-			name = SismosVCs;
+			name = QuizVCs;
 			sourceTree = "<group>";
 		};
-		A1B43F381C2F9B9E002233DD /* FlashcardsVCs */ = {
+		A1B43F5E1C321399002233DD /* DeckVCs */ = {
 			isa = PBXGroup;
 			children = (
-				A1B43F391C2F9BBE002233DD /* FlashcardsManagerTableViewController.swift */,
-				A1B43F3B1C2F9BD2002233DD /* NewFlashcardViewController.swift */,
-				A1B43F3D1C2F9BE2002233DD /* PlayFlashcardsViewController.swift */,
+				A1B43F5A1C320FEC002233DD /* DeckManagerTableViewController.swift */,
+				A1B43F5C1C3211FA002233DD /* ShowDeckTableViewController.swift */,
+				A1B43F611C3214BC002233DD /* AddDeckViewController.swift */,
+				A1B43F631C3214CB002233DD /* AddFlashcardViewController.swift */,
+				A150E0691C341D22003DD480 /* FlashcardTableViewCell.swift */,
+				A150E06B1C3440EA003DD480 /* FlashcardDetailViewController.swift */,
+				A150E06D1C345ED3003DD480 /* PlayTableViewController.swift */,
+				A150E06F1C34629F003DD480 /* GameViewController.swift */,
+				A1BF8E101C3493600034BEED /* FlashcardViewController.swift */,
+				A1BF8E121C34B16B0034BEED /* AnswerViewController.swift */,
 			);
-			name = FlashcardsVCs;
+			name = DeckVCs;
 			sourceTree = "<group>";
 		};
 		A1F947421C260F4A00A685E0 /* Parse */ = {
@@ -157,6 +196,17 @@
 				A1F947431C260FC300A685E0 /* ParseClient.swift */,
 			);
 			name = Parse;
+			sourceTree = "<group>";
+		};
+		A1FE4CCD1C337426009B4E48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1B43F3F1C2F9C02002233DD /* Quiz.swift */,
+				A1B43F4A1C2F9DA1002233DD /* SeismicApp.xcdatamodeld */,
+				A1B43F531C31E852002233DD /* Deck.swift */,
+				A1B43F551C31E888002233DD /* Flashcard.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +241,7 @@
 				TargetAttributes = {
 					A128D08B1C1BA50A004C64C4 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YCWY7J2PNU;
 					};
 				};
 			};
@@ -221,8 +272,9 @@
 				A128D09D1C1BA50A004C64C4 /* LaunchScreen.storyboard in Resources */,
 				A128D09A1C1BA50A004C64C4 /* Assets.xcassets in Resources */,
 				A128D0951C1BA50A004C64C4 /* Main.storyboard in Resources */,
+				A1B43F591C3202F1002233DD /* Flashcard.storyboard in Resources */,
 				A195DDD51C25E22D00DE100E /* SesimicInfo.storyboard in Resources */,
-				A1B43F371C2F9AA0002233DD /* Flashcards.storyboard in Resources */,
+				A1B43F371C2F9AA0002233DD /* Quiz.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,24 +287,37 @@
 			files = (
 				A1F947411C25FCFA00A685E0 /* SignUpViewController.swift in Sources */,
 				A103BC5D1C25BC2E008D9805 /* LoginViewController.swift in Sources */,
+				A1BF8E111C3493600034BEED /* FlashcardViewController.swift in Sources */,
+				A1B43F5B1C320FEC002233DD /* DeckManagerTableViewController.swift in Sources */,
+				A150E06A1C341D22003DD480 /* FlashcardTableViewCell.swift in Sources */,
+				A1B43F4E1C30E7AE002233DD /* QuizViewController.swift in Sources */,
 				A1F947441C260FC300A685E0 /* ParseClient.swift in Sources */,
 				A17AA75D1C2F1225003BBC6E /* USGS.swift in Sources */,
-				A1B43F3E1C2F9BE2002233DD /* PlayFlashcardsViewController.swift in Sources */,
+				A150E06E1C345ED3003DD480 /* PlayTableViewController.swift in Sources */,
+				A1B43F3E1C2F9BE2002233DD /* PlayQuizViewController.swift in Sources */,
+				A1BF8E131C34B16B0034BEED /* AnswerViewController.swift in Sources */,
 				A1B43F4C1C2F9DA1002233DD /* SeismicApp.xcdatamodeld in Sources */,
-				A18311551C28AA2B0073ADE5 /* QueEsTableViewController.swift in Sources */,
-				A1B43F401C2F9C02002233DD /* Flashcard.swift in Sources */,
+				A1B43F5D1C3211FA002233DD /* ShowDeckTableViewController.swift in Sources */,
+				A150E0701C34629F003DD480 /* GameViewController.swift in Sources */,
+				A1B43F401C2F9C02002233DD /* Quiz.swift in Sources */,
 				A1E180211C27003F00AE6759 /* Helpers.swift in Sources */,
 				A17AA7641C2F17F2003BBC6E /* LatestEarthquakesTableViewController.swift in Sources */,
 				A1F947481C26101A00A685E0 /* User.swift in Sources */,
+				A1B43F641C3214CB002233DD /* AddFlashcardViewController.swift in Sources */,
+				A1B43F541C31E852002233DD /* Deck.swift in Sources */,
+				A1B43F501C31603E002233DD /* ShowQuizViewController.swift in Sources */,
 				A128D0901C1BA50A004C64C4 /* AppDelegate.swift in Sources */,
-				A1B43F3C1C2F9BD2002233DD /* NewFlashcardViewController.swift in Sources */,
+				A1B43F3C1C2F9BD2002233DD /* NewQuizTableViewController.swift in Sources */,
+				A150E06C1C3440EA003DD480 /* FlashcardDetailViewController.swift in Sources */,
 				A103BC5F1C25BC5E008D9805 /* InformationViewController.swift in Sources */,
+				A1B43F621C3214BC002233DD /* AddDeckViewController.swift in Sources */,
+				A1BF8E151C34CC170034BEED /* HelperTableViewController.swift in Sources */,
 				A17AA75F1C2F12FD003BBC6E /* Earthquake.swift in Sources */,
+				A1B43F561C31E888002233DD /* Flashcard.swift in Sources */,
 				A1B43F321C2F455A002233DD /* EarthquakeDetailViewController.swift in Sources */,
-				A18311571C28AA3A0073ADE5 /* PorQueTableViewController.swift in Sources */,
 				A17243081C2F33AD00D43CC7 /* LatestEarthquakeTableViewCell.swift in Sources */,
 				A195DDD71C25E38B00DE100E /* HomeTableViewController.swift in Sources */,
-				A1B43F3A1C2F9BBE002233DD /* FlashcardsManagerTableViewController.swift in Sources */,
+				A1B43F3A1C2F9BBE002233DD /* QuizManagerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,12 +356,20 @@
 			name = SesimicInfo.storyboard;
 			sourceTree = "<group>";
 		};
-		A1B43F351C2F9AA0002233DD /* Flashcards.storyboard */ = {
+		A1B43F351C2F9AA0002233DD /* Quiz.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A1B43F361C2F9AA0002233DD /* Base */,
 			);
-			name = Flashcards.storyboard;
+			name = Quiz.storyboard;
+			sourceTree = "<group>";
+		};
+		A1B43F571C3202F1002233DD /* Flashcard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1B43F581C3202F1002233DD /* Base */,
+			);
+			name = Flashcard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -387,9 +460,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SeismicApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Leandoers.SeismicApp;
+				PRODUCT_BUNDLE_IDENTIFIER = cl.propiedadfacil.SeismicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -398,9 +472,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SeismicApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Leandoers.SeismicApp;
+				PRODUCT_BUNDLE_IDENTIFIER = cl.propiedadfacil.SeismicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

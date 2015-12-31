@@ -19,12 +19,14 @@ class Earthquake{
     
     init(dict: [String:AnyObject]){
 
-        let data = dict["properties"]!
+        let data = dict["properties"]! as! [String:AnyObject]
         let geometry = dict["geometry"] as! [String:AnyObject]
         let coordinates = geometry["coordinates"] as! NSArray
         
         let epocTime = NSTimeInterval( (data["time"]! as! Double)/1000 )
         self.magnitude = data["mag"] as! Double
+
+        //Filtering. Using only chilean earthquakes
         self.description = (data["place"] as! String).stringByReplacingOccurrencesOfString(", Chile", withString: "")
         self.lat = CLLocationDegrees(coordinates[0] as! Double)
         self.lng = CLLocationDegrees(coordinates[1] as! Double)

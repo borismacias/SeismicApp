@@ -13,10 +13,11 @@ class LatestEarthquakesTableViewController: UITableViewController {
     var earthquakes:[Earthquake] = []
     @IBOutlet var tableview:UITableView!
     var spinner:UIActivityIndicatorView!
+    @IBOutlet var noEarthquakesLabel:UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Setting up a spinner
         spinner = UIActivityIndicatorView()
         spinner.activityIndicatorViewStyle = .Gray
         spinner.center = view.center
@@ -24,15 +25,27 @@ class LatestEarthquakesTableViewController: UITableViewController {
         view.addSubview(spinner)
         spinner.startAnimating()
         
+        self.noEarthquakesLabel.hidden = true
+        self.noEarthquakesLabel.center = self.view.center
+        self.view.addSubview(self.noEarthquakesLabel)
+        
+        //Control to refresh the table's information on swipe down
         refreshControl = UIRefreshControl()
         refreshControl?.backgroundColor = UIColor.whiteColor()
         refreshControl?.tintColor = UIColor.grayColor()
         refreshControl?.addTarget(self, action: "getEarthquakes", forControlEvents: UIControlEvents.ValueChanged)
         
+        //Get latest earthquake data
         USGS.sharedInstance().getData( {(success,data) -> Void in
             dispatch_async(dispatch_get_main_queue(), {
                 if(success){
                     self.earthquakes = data!["earthquakes"] as! [Earthquake]
+                    if self.earthquakes.count == 0 {
+                        self.noEarthquakesLabel.hidden = false
+                    }
+                    else{
+                        self.noEarthquakesLabel.hidden = true
+                    }
                     self.tableView.reloadData()
                 }else{
                     Helpers.displayAlert("Error", message: "Hubo un error en la red. Reinicia la aplicación e inténtalo nuevamente.", vc: self)
@@ -41,6 +54,7 @@ class LatestEarthquakesTableViewController: UITableViewController {
             })
         })
         
+        //Deleting unused cells and left margin on separator insets
         self.tableview.separatorInset = UIEdgeInsetsZero
         self.tableview.tableFooterView = UIView(frame: CGRectZero)
         
@@ -52,7 +66,6 @@ class LatestEarthquakesTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return self.earthquakes.count
     }
 
@@ -60,6 +73,8 @@ class LatestEarthquakesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("EarthquakeCell", forIndexPath: indexPath) as! LatestEarthquakeTableViewCell
         let earthquake = self.earthquakes[indexPath.row]
+        
+        //Adding cell info
         cell.magnitudeLabel?.text = "\(earthquake.magnitude)"
         cell.placeLabel?.text = earthquake.description
 
@@ -67,6 +82,8 @@ class LatestEarthquakesTableViewController: UITableViewController {
         formatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
         let dateString = formatter.stringFromDate(earthquake.date)
         cell.dateLabel?.text = dateString
+
+        //Deleting left inset margin
         cell.layoutMargins = UIEdgeInsetsZero
         return cell
     }
@@ -94,6 +111,12 @@ class LatestEarthquakesTableViewController: UITableViewController {
                 if(success){
                     self.earthquakes = data!["earthquakes"] as! [Earthquake]
                     self.tableView.reloadData()
+                    if self.earthquakes.count == 0 {
+                        self.noEarthquakesLabel.hidden = false
+                    }
+                    else{
+                        self.noEarthquakesLabel.hidden = true
+                    }
                 }else{
                     Helpers.displayAlert("Error", message: "Hubo un error en la red. Reinicia la aplicación e inténtalo nuevamente.", vc: self)
                 }

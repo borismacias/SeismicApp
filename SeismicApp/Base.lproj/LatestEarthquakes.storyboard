@@ -68,11 +68,20 @@
                     </tableView>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="noEarthquakesLabel" destination="dFJ-gR-jzQ" id="foa-XU-TRN"/>
                         <outlet property="tableview" destination="03J-dv-GL6" id="7DR-Hs-Yds"/>
                         <segue destination="P9R-JS-f3o" kind="presentation" identifier="detailEarthquakeSegue" id="U2C-i3-DLP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8j-6A-AZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dFJ-gR-jzQ">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <string key="text">No han ocurrido temblores en Chile en las últimas 24 horas. Puedes arrastrar hacia abajo esta ventana para actualizar los datos.</string>
+                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </objects>
             <point key="canvasLocation" x="1763" y="1989"/>
         </scene>
