@@ -59,7 +59,9 @@ class USGS: NSObject {
                         let filtered = features.filter { feature in
                             let properties = feature["properties"] as! [String:AnyObject]
                             let place = properties["place"] as! String
-                            return place.rangeOfString(", Chile") != nil
+                            //Filtering. Using only chilean earthquakes
+                            //return place.rangeOfString(", Chile") != nil
+                            return true
                         }
                         self.storeData(filtered)
                         data["earthquakes"] = self.earthquakes

@@ -26,7 +26,6 @@ class Earthquake{
         let epocTime = NSTimeInterval( (data["time"]! as! Double)/1000 )
         self.magnitude = data["mag"] as! Double
 
-        //Filtering. Using only chilean earthquakes
         self.description = (data["place"] as! String).stringByReplacingOccurrencesOfString(", Chile", withString: "")
         self.lat = CLLocationDegrees(coordinates[0] as! Double)
         self.lng = CLLocationDegrees(coordinates[1] as! Double)

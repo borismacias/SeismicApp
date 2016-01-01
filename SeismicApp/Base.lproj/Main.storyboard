@@ -157,6 +157,16 @@
                                     <action selector="signUp" destination="evs-Dd-pfB" eventType="touchUpInside" id="aSC-3f-wkn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n74-6F-3wi">
+                                <rect key="frame" x="230" y="455" width="140" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel" destination="evs-Dd-pfB" eventType="touchUpInside" id="6mF-tM-HCb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -165,7 +175,10 @@
                             <constraint firstItem="DKV-gP-KGM" firstAttribute="top" secondItem="0Q2-IX-tTx" secondAttribute="bottom" constant="40" id="9zH-1y-s3i"/>
                             <constraint firstItem="0Q2-IX-tTx" firstAttribute="top" secondItem="5Vj-dQ-rIS" secondAttribute="bottom" constant="40" id="A5h-zp-lL0"/>
                             <constraint firstItem="0Q2-IX-tTx" firstAttribute="centerY" secondItem="ZYM-OV-xvf" secondAttribute="centerY" id="NDj-hh-eb5"/>
+                            <constraint firstItem="n74-6F-3wi" firstAttribute="centerX" secondItem="ZYM-OV-xvf" secondAttribute="centerX" id="Ypq-3d-6ut"/>
                             <constraint firstItem="DKV-gP-KGM" firstAttribute="centerX" secondItem="ZYM-OV-xvf" secondAttribute="centerX" id="ZDQ-vJ-AiO"/>
+                            <constraint firstItem="n74-6F-3wi" firstAttribute="width" secondItem="DKV-gP-KGM" secondAttribute="width" id="f3r-zx-Rmf"/>
+                            <constraint firstItem="n74-6F-3wi" firstAttribute="top" secondItem="DKV-gP-KGM" secondAttribute="bottom" constant="20" id="oh1-Dd-PqZ"/>
                         </constraints>
                     </view>
                     <connections>

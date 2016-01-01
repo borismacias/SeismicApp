@@ -15,6 +15,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordTextField:UITextField!
     var spinner:UIActivityIndicatorView!
     
+    @IBAction func cancel(){
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    
+    }
+    
     @IBAction func signUp(){
         
         //Setting up and adding a spinner
@@ -35,6 +41,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             let dismissAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
             alertViewController.addAction(dismissAction)
             self.presentViewController(alertViewController, animated: true, completion: nil)
+            spinner.stopAnimating()
         }else{
             let userInfo = [
                 "name": name!,

@@ -33,6 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.Default,handler: nil)
             
             alertController.addAction(alertAction)
+            spinner.stopAnimating()
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         else{
