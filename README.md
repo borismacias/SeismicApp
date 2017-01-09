@@ -1,5 +1,7 @@
 # SeismicApp
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/541399edde8643c8ab41fe3942207cc8)](https://www.codacy.com/app/de5pair/SeismicApp?utm_source=github.com&utm_medium=referral&utm_content=de5pair/SeismicApp&utm_campaign=badger)
+
 ### What's this for?
 
 This app tries to help Chilean people to better understand earthquakes and how to be ready when one strikes
